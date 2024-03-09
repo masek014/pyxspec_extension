@@ -1,0 +1,575 @@
+
+========================================================================
+Model isothermal:constant<1>*vapec<2> Source No.: 1   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 1
+   1    1   constant   factor              1.00000      +/-  0.0          
+   2    2   vapec      kT         keV      6.50000      +/-  0.0          
+   3    2   vapec      He                  1.00000      frozen
+   4    2   vapec      C                   1.00000      frozen
+   5    2   vapec      N                   1.00000      frozen
+   6    2   vapec      O                   1.00000      frozen
+   7    2   vapec      Ne                  1.00000      frozen
+   8    2   vapec      Mg                  1.00000      frozen
+   9    2   vapec      Al                  1.00000      frozen
+  10    2   vapec      Si                  1.00000      frozen
+  11    2   vapec      S                   1.00000      frozen
+  12    2   vapec      Ar                  1.00000      frozen
+  13    2   vapec      Ca                  1.00000      frozen
+  14    2   vapec      Fe                  1.00000      frozen
+  15    2   vapec      Ni                  1.00000      frozen
+  16    2   vapec      Redshift            0.0          frozen
+  17    2   vapec      norm                1.00000      +/-  0.0          
+                           Data group: 2
+  18    1   constant   factor              1.00000      = isothermal:p1
+  19    2   vapec      kT         keV      6.50000      = isothermal:p2
+  20    2   vapec      He                  1.00000      = isothermal:p3
+  21    2   vapec      C                   1.00000      = isothermal:p4
+  22    2   vapec      N                   1.00000      = isothermal:p5
+  23    2   vapec      O                   1.00000      = isothermal:p6
+  24    2   vapec      Ne                  1.00000      = isothermal:p7
+  25    2   vapec      Mg                  1.00000      = isothermal:p8
+  26    2   vapec      Al                  1.00000      = isothermal:p9
+  27    2   vapec      Si                  1.00000      = isothermal:p10
+  28    2   vapec      S                   1.00000      = isothermal:p11
+  29    2   vapec      Ar                  1.00000      = isothermal:p12
+  30    2   vapec      Ca                  1.00000      = isothermal:p13
+  31    2   vapec      Fe                  1.00000      = isothermal:p14
+  32    2   vapec      Ni                  1.00000      = isothermal:p15
+  33    2   vapec      Redshift            0.0          = isothermal:p16
+  34    2   vapec      norm                1.00000      = isothermal:p17
+________________________________________________________________________
+
+Reading APEC data from 3.0.9
+
+
+Fit statistic  : Chi-Squared                 6946.11     using 108 bins, spectrum 1, group 1.
+                 Chi-Squared                 6829.28     using 108 bins, spectrum 2, group 2.
+Total fit statistic                         13775.40     with 213 d.o.f.
+
+Test statistic : Chi-Squared                13775.40     using 216 bins.
+ Null hypothesis probability of 0.00e+00 with 213 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : Chi-Squared                 6963.00     using 108 bins, spectrum 1, group 1.
+                 Chi-Squared                 6846.00     using 108 bins, spectrum 2, group 2.
+Total fit statistic                         13809.00     with 213 d.o.f.
+
+Test statistic : Chi-Squared                13809.00     using 216 bins.
+ Null hypothesis probability of 0.00e+00 with 213 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : Chi-Squared                 6963.00     using 108 bins, spectrum 1, group 1.
+                 Chi-Squared                 6846.00     using 108 bins, spectrum 2, group 2.
+Total fit statistic                         13809.00     with 213 d.o.f.
+
+Test statistic : Chi-Squared                13809.00     using 216 bins.
+ Null hypothesis probability of 0.00e+00 with 213 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : Chi-Squared                 6963.00     using 108 bins, spectrum 1, group 1.
+                 Chi-Squared                 6846.00     using 108 bins, spectrum 2, group 2.
+Total fit statistic                         13809.00     with 213 d.o.f.
+
+Test statistic : Chi-Squared                13809.00     using 216 bins.
+ Null hypothesis probability of 0.00e+00 with 213 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : Chi-Squared                 6963.00     using 108 bins, spectrum 1, group 1.
+                 Chi-Squared                 6846.00     using 108 bins, spectrum 2, group 2.
+Total fit statistic                         13809.00     with 214 d.o.f.
+
+Test statistic : Chi-Squared                13809.00     using 216 bins.
+ Null hypothesis probability of 0.00e+00 with 214 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : Chi-Squared                 6963.00     using 108 bins, spectrum 1, group 1.
+                 Chi-Squared                 6846.00     using 108 bins, spectrum 2, group 2.
+Total fit statistic                         13809.00     with 213 d.o.f.
+
+Test statistic : Chi-Squared                13809.00     using 216 bins.
+ Null hypothesis probability of 0.00e+00 with 213 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : Chi-Squared                 6963.00     using 108 bins, spectrum 1, group 1.
+                 Chi-Squared                 6846.00     using 108 bins, spectrum 2, group 2.
+Total fit statistic                         13809.00     with 213 d.o.f.
+
+Test statistic : Chi-Squared                13809.00     using 216 bins.
+ Null hypothesis probability of 0.00e+00 with 213 degrees of freedom
+ Current data and model not fit yet.
+  parameter isothermal:18 is not frozen.
+
+Fit statistic  : Chi-Squared                 6963.00     using 108 bins, spectrum 1, group 1.
+                 Chi-Squared                 6846.00     using 108 bins, spectrum 2, group 2.
+Total fit statistic                         13809.00     with 211 d.o.f.
+
+Test statistic : Chi-Squared                13809.00     using 216 bins.
+ Null hypothesis probability of 0.00e+00 with 211 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : Chi-Squared                 6963.00     using 108 bins, spectrum 1, group 1.
+                 Chi-Squared                 6846.00     using 108 bins, spectrum 2, group 2.
+Total fit statistic                         13809.00     with 211 d.o.f.
+
+Test statistic : Chi-Squared                13809.00     using 216 bins.
+ Null hypothesis probability of 0.00e+00 with 211 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : Chi-Squared                 6963.00     using 108 bins, spectrum 1, group 1.
+                 Chi-Squared                 6846.00     using 108 bins, spectrum 2, group 2.
+Total fit statistic                         13809.00     with 211 d.o.f.
+
+Test statistic : Chi-Squared                13809.00     using 216 bins.
+ Null hypothesis probability of 0.00e+00 with 211 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : Chi-Squared                 6963.00     using 108 bins, spectrum 1, group 1.
+                 Chi-Squared                 6846.00     using 108 bins, spectrum 2, group 2.
+Total fit statistic                         13809.00     with 212 d.o.f.
+
+Test statistic : Chi-Squared                13809.00     using 216 bins.
+ Null hypothesis probability of 0.00e+00 with 212 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : Chi-Squared                 6963.00     using 108 bins, spectrum 1, group 1.
+                 Chi-Squared                 6846.00     using 108 bins, spectrum 2, group 2.
+Total fit statistic                         13809.00     with 210 d.o.f.
+
+Test statistic : Chi-Squared                13809.00     using 216 bins.
+ Null hypothesis probability of 0.00e+00 with 210 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : Chi-Squared                 6963.00     using 108 bins, spectrum 1, group 1.
+                 Chi-Squared                 6846.00     using 108 bins, spectrum 2, group 2.
+Total fit statistic                         13809.00     with 210 d.o.f.
+
+Test statistic : Chi-Squared                13809.00     using 216 bins.
+ Null hypothesis probability of 0.00e+00 with 210 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : Chi-Squared                 6963.00     using 108 bins, spectrum 1, group 1.
+                 Chi-Squared                 6846.00     using 108 bins, spectrum 2, group 2.
+Total fit statistic                         13809.00     with 210 d.o.f.
+
+Test statistic : Chi-Squared                13809.00     using 216 bins.
+ Null hypothesis probability of 0.00e+00 with 210 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : Chi-Squared                 6963.00     using 108 bins, spectrum 1, group 1.
+                 Chi-Squared                 6846.00     using 108 bins, spectrum 2, group 2.
+Total fit statistic                         13809.00     with 211 d.o.f.
+
+Test statistic : Chi-Squared                13809.00     using 216 bins.
+ Null hypothesis probability of 0.00e+00 with 211 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : Chi-Squared                 6963.00     using 108 bins, spectrum 1, group 1.
+                 Chi-Squared                 6846.00     using 108 bins, spectrum 2, group 2.
+Total fit statistic                         13809.00     with 212 d.o.f.
+
+Test statistic : Chi-Squared                13809.00     using 216 bins.
+ Null hypothesis probability of 0.00e+00 with 212 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : Chi-Squared                 6963.00     using 108 bins, spectrum 1, group 1.
+                 Chi-Squared                 6846.00     using 108 bins, spectrum 2, group 2.
+Total fit statistic                         13809.00     with 212 d.o.f.
+
+Test statistic : Chi-Squared                13809.00     using 216 bins.
+ Null hypothesis probability of 0.00e+00 with 212 degrees of freedom
+ Current data and model not fit yet.
+Default fit statistic is set to: C-Statistic
+   This will apply to all current and newly loaded spectra.
+
+Fit statistic  : C-Statistic                204128.4     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                200764.9     using 108 bins, spectrum 2, group 2.
+Total fit statistic                         404893.2     with 212 d.o.f.
+
+Test statistic : Chi-Squared                13809.00     using 216 bins.
+ Null hypothesis probability of 0.00e+00 with 212 degrees of freedom
+ Current data and model not fit yet.
+                                   Parameters
+C-Statistic  |beta|/N    Lvl isothermal:2: isothermal:17 isothermal:18      r1:slope
+39944.2      50255         0      0.261042   1.11219e+07       1.01126       1.00000
+38977.1      61403.3       0      0.264183   1.03822e+07      0.962239       1.00000
+38251.4      42273.5       0      0.267403   9.66980e+06      0.930369       1.00000
+38198.4      29834.3      -1      0.288535   2.70631e+06      0.878009       1.00000
+31344        108385       -2      0.310523   1.67264e+06      0.934896       1.00000
+29042        88715.8      -2      0.338892       720640.      0.966857       1.00000
+29032.5      64018.9      -3      0.394977       171014.      0.987261       1.00000
+17373.6      66676.1      -4      0.424139       193518.      0.995455       1.00000
+13123.1      40141.7      -5      0.491164       84873.5       1.00515       1.00000
+7372.37      35579.2      -6      0.538235       74213.6       1.00883       1.00000
+5026.52      17300.1      -2      0.625880       36607.0      0.999679       1.00000
+2255.82      14260.3      -3      0.701905       28113.5       1.00508       1.00000
+1159.38      7236         -4      0.785089       20036.2       1.00592       1.00000
+583.172      4163.15      -5      0.846106       17473.1       1.00368       1.00000
+485.229      1338.13      -6      0.884191       15979.5       1.00099       1.00000
+482.325      248.064      -7      0.888955       15930.3      0.999263       1.00000
+482.322      6.42546      -8      0.889195       15923.5      0.999030       1.00000
+469.103      127.227       0      0.889566       15921.4      0.993615      0.993485
+468.548      238.724       0      0.889905       15935.2      0.994617      0.993079
+468.259      218.761       0      0.890211       15947.0      0.995457      0.992706
+468.212      206.694       1      0.890244       15948.4      0.995560      0.992666
+468.148      204.221       1      0.890277       15949.7      0.995661      0.992627
+468.142      204.981       2      0.890280       15949.9      0.995671      0.992623
+==================================================
+ Variances and Principal Axes
+         isothermal:2isothermal:17isothermal:18       r1  
+ 5.2679E-06|  0.9920   0.0000   0.1260  -0.0005  
+ 7.3654E-06|  0.0175  -0.0000  -0.1334   0.9909  
+ 6.5334E-04| -0.1247   0.0000   0.9830   0.1345  
+ 1.5286E+05| -0.0000   1.0000  -0.0000   0.0000  
+--------------------------------------------------
+
+================================================
+  Covariance Matrix
+        1           2           3           4   
+   5.167e-05  -2.356e+00  -7.305e-05  -1.806e-05
+  -2.356e+00   1.529e+05  -4.170e-01   4.687e-01
+  -7.305e-05  -4.170e-01   6.327e-04   8.414e-05
+  -1.806e-05   4.687e-01   8.414e-05   2.049e-05
+------------------------------------------------
+
+========================================================================
+Model isothermal:constant<1>*vapec<2> Source No.: 1   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 1
+   1    1   constant   factor              1.00000      frozen
+   2    2   vapec      kT         keV      0.890280     +/-  7.18796E-03  
+   3    2   vapec      He                  1.00000      frozen
+   4    2   vapec      C                   1.00000      frozen
+   5    2   vapec      N                   1.00000      frozen
+   6    2   vapec      O                   1.00000      frozen
+   7    2   vapec      Ne                  1.00000      frozen
+   8    2   vapec      Mg                  1.00000      frozen
+   9    2   vapec      Al                  1.00000      frozen
+  10    2   vapec      Si                  1.00000      frozen
+  11    2   vapec      S                   1.00000      frozen
+  12    2   vapec      Ar                  1.00000      frozen
+  13    2   vapec      Ca                  1.00000      frozen
+  14    2   vapec      Fe                  1.00000      frozen
+  15    2   vapec      Ni                  1.00000      frozen
+  16    2   vapec      Redshift            0.0          frozen
+  17    2   vapec      norm                1.59499E+04  +/-  390.976      
+                           Data group: 2
+  18    1   constant   factor              0.995671     +/-  2.51537E-02  
+  19    2   vapec      kT         keV      0.890280     = isothermal:p2
+  20    2   vapec      He                  1.00000      = isothermal:p3
+  21    2   vapec      C                   1.00000      = isothermal:p4
+  22    2   vapec      N                   1.00000      = isothermal:p5
+  23    2   vapec      O                   1.00000      = isothermal:p6
+  24    2   vapec      Ne                  1.00000      = isothermal:p7
+  25    2   vapec      Mg                  1.00000      = isothermal:p8
+  26    2   vapec      Al                  1.00000      = isothermal:p9
+  27    2   vapec      Si                  1.00000      = isothermal:p10
+  28    2   vapec      S                   1.00000      = isothermal:p11
+  29    2   vapec      Ar                  1.00000      = isothermal:p12
+  30    2   vapec      Ca                  1.00000      = isothermal:p13
+  31    2   vapec      Fe                  1.00000      = isothermal:p14
+  32    2   vapec      Ni                  1.00000      = isothermal:p15
+  33    2   vapec      Redshift            0.0          = isothermal:p16
+  34    2   vapec      norm                1.59499E+04  = isothermal:p17
+________________________________________________________________________
+
+
+Response Parameters:
+
+========================================================================
+Source No.: 1
+Rpar Spectrum Rmodel   Rpar_name  Unit   Value
+
+   1     1    gain     slope             0.992623     +/-  4.52659E-03  
+   2     1    gain     offset            0.0          frozen
+   3     2    gain     slope             0.992623     = p1
+   4     2    gain     offset            0.0          = p2
+________________________________________________________________________
+
+
+Fit statistic  : C-Statistic                  247.84     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                  220.30     using 108 bins, spectrum 2, group 2.
+Total fit statistic                           468.14     with 212 d.o.f.
+
+Test statistic : Chi-Squared                  436.28     using 216 bins.
+ Null hypothesis probability of 1.20e-17 with 212 degrees of freedom
+ Parameter   Confidence Range (2.706)
+                                   Parameters
+C-Statistic  |beta|/N    Lvl isothermal:2: isothermal:17 isothermal:18      r1:slope
+==================================================
+ Variances and Principal Axes
+         isothermal:2isothermal:17isothermal:18       r1  
+ 5.2122E-06|  0.2575   0.0000  -0.0786   0.9631  
+ 6.0492E-06|  0.9557   0.0000   0.1678  -0.2418  
+ 5.6139E-04| -0.1426   0.0000   0.9827   0.1183  
+ 1.7041E+05| -0.0000   1.0000  -0.0000   0.0000  
+--------------------------------------------------
+
+================================================
+  Covariance Matrix
+        1           2           3           4   
+   6.463e-05  -2.840e+00  -6.485e-05  -1.624e-05
+  -2.840e+00   1.704e+05  -7.773e-01   3.996e-01
+  -6.485e-05  -7.773e-01   5.459e-04   6.281e-05
+  -1.624e-05   3.996e-01   6.281e-05   1.398e-05
+------------------------------------------------
+
+========================================================================
+Model isothermal:constant<1>*vapec<2> Source No.: 1   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 1
+   1    1   constant   factor              1.00000      frozen
+   2    2   vapec      kT         keV      0.902106     +/-  8.03943E-03  
+   3    2   vapec      He                  1.00000      frozen
+   4    2   vapec      C                   1.00000      frozen
+   5    2   vapec      N                   1.00000      frozen
+   6    2   vapec      O                   1.00000      frozen
+   7    2   vapec      Ne                  1.00000      frozen
+   8    2   vapec      Mg                  1.00000      frozen
+   9    2   vapec      Al                  1.00000      frozen
+  10    2   vapec      Si                  1.00000      frozen
+  11    2   vapec      S                   1.00000      frozen
+  12    2   vapec      Ar                  1.00000      frozen
+  13    2   vapec      Ca                  1.00000      frozen
+  14    2   vapec      Fe                  1.00000      frozen
+  15    2   vapec      Ni                  1.00000      frozen
+  16    2   vapec      Redshift            0.0          frozen
+  17    2   vapec      norm                1.57491E+04  +/-  412.806      
+                           Data group: 2
+  18    1   constant   factor              0.951636     +/-  2.33637E-02  
+  19    2   vapec      kT         keV      0.902106     = isothermal:p2
+  20    2   vapec      He                  1.00000      = isothermal:p3
+  21    2   vapec      C                   1.00000      = isothermal:p4
+  22    2   vapec      N                   1.00000      = isothermal:p5
+  23    2   vapec      O                   1.00000      = isothermal:p6
+  24    2   vapec      Ne                  1.00000      = isothermal:p7
+  25    2   vapec      Mg                  1.00000      = isothermal:p8
+  26    2   vapec      Al                  1.00000      = isothermal:p9
+  27    2   vapec      Si                  1.00000      = isothermal:p10
+  28    2   vapec      S                   1.00000      = isothermal:p11
+  29    2   vapec      Ar                  1.00000      = isothermal:p12
+  30    2   vapec      Ca                  1.00000      = isothermal:p13
+  31    2   vapec      Fe                  1.00000      = isothermal:p14
+  32    2   vapec      Ni                  1.00000      = isothermal:p15
+  33    2   vapec      Redshift            0.0          = isothermal:p16
+  34    2   vapec      norm                1.57491E+04  = isothermal:p17
+________________________________________________________________________
+
+
+Response Parameters:
+
+========================================================================
+Source No.: 1
+Rpar Spectrum Rmodel   Rpar_name  Unit   Value
+
+   1     1    gain     slope             0.982640     +/-  3.73939E-03  
+   2     1    gain     offset            0.0          frozen
+   3     2    gain     slope             0.982640     = p1
+   4     2    gain     offset            0.0          = p2
+________________________________________________________________________
+
+
+Fit statistic  : C-Statistic                  244.24     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                  236.06     using 108 bins, spectrum 2, group 2.
+Total fit statistic                           480.30     with 212 d.o.f.
+
+Test statistic : Chi-Squared                  430.96     using 216 bins.
+ Null hypothesis probability of 4.77e-17 with 212 degrees of freedom
+***Warning: New best fit found, fit parameters will be set to new values.
+                                   Parameters
+C-Statistic  |beta|/N    Lvl isothermal:2: isothermal:17 isothermal:18      r1:slope
+466.137      118.987      -3      0.909711       15420.0      0.980085      0.979257
+465.071      202.129      -1      0.913079       15359.7      0.987311      0.977253
+464.809      86.3532      -1      0.915442       15251.3      0.993673      0.976660
+464.809      34.6731      12      0.915442       15251.3      0.993673      0.976660
+==================================================
+ Variances and Principal Axes
+         isothermal:2isothermal:17isothermal:18       r1  
+ 5.0719E-06|  0.5848   0.0000  -0.0160   0.8110  
+ 5.5137E-06|  0.8010   0.0000   0.1696  -0.5742  
+ 5.8360E-04| -0.1284   0.0000   0.9854   0.1120  
+ 1.1600E+05| -0.0000   1.0000  -0.0000   0.0000  
+--------------------------------------------------
+
+================================================
+  Covariance Matrix
+        1           2           3           4   
+   4.297e-05  -1.805e+00  -6.112e-05  -1.342e-05
+  -1.805e+00   1.160e+05  -7.717e-01   3.143e-01
+  -6.112e-05  -7.717e-01   5.720e-04   6.173e-05
+  -1.342e-05   3.143e-01   6.173e-05   1.333e-05
+------------------------------------------------
+
+========================================================================
+Model isothermal:constant<1>*vapec<2> Source No.: 1   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 1
+   1    1   constant   factor              1.00000      frozen
+   2    2   vapec      kT         keV      0.915442     +/-  6.55550E-03  
+   3    2   vapec      He                  1.00000      frozen
+   4    2   vapec      C                   1.00000      frozen
+   5    2   vapec      N                   1.00000      frozen
+   6    2   vapec      O                   1.00000      frozen
+   7    2   vapec      Ne                  1.00000      frozen
+   8    2   vapec      Mg                  1.00000      frozen
+   9    2   vapec      Al                  1.00000      frozen
+  10    2   vapec      Si                  1.00000      frozen
+  11    2   vapec      S                   1.00000      frozen
+  12    2   vapec      Ar                  1.00000      frozen
+  13    2   vapec      Ca                  1.00000      frozen
+  14    2   vapec      Fe                  1.00000      frozen
+  15    2   vapec      Ni                  1.00000      frozen
+  16    2   vapec      Redshift            0.0          frozen
+  17    2   vapec      norm                1.52513E+04  +/-  340.586      
+                           Data group: 2
+  18    1   constant   factor              0.993673     +/-  2.39155E-02  
+  19    2   vapec      kT         keV      0.915442     = isothermal:p2
+  20    2   vapec      He                  1.00000      = isothermal:p3
+  21    2   vapec      C                   1.00000      = isothermal:p4
+  22    2   vapec      N                   1.00000      = isothermal:p5
+  23    2   vapec      O                   1.00000      = isothermal:p6
+  24    2   vapec      Ne                  1.00000      = isothermal:p7
+  25    2   vapec      Mg                  1.00000      = isothermal:p8
+  26    2   vapec      Al                  1.00000      = isothermal:p9
+  27    2   vapec      Si                  1.00000      = isothermal:p10
+  28    2   vapec      S                   1.00000      = isothermal:p11
+  29    2   vapec      Ar                  1.00000      = isothermal:p12
+  30    2   vapec      Ca                  1.00000      = isothermal:p13
+  31    2   vapec      Fe                  1.00000      = isothermal:p14
+  32    2   vapec      Ni                  1.00000      = isothermal:p15
+  33    2   vapec      Redshift            0.0          = isothermal:p16
+  34    2   vapec      norm                1.52513E+04  = isothermal:p17
+________________________________________________________________________
+
+
+Response Parameters:
+
+========================================================================
+Source No.: 1
+Rpar Spectrum Rmodel   Rpar_name  Unit   Value
+
+   1     1    gain     slope             0.976660     +/-  3.65119E-03  
+   2     1    gain     offset            0.0          frozen
+   3     2    gain     slope             0.976660     = p1
+   4     2    gain     offset            0.0          = p2
+________________________________________________________________________
+
+
+Fit statistic  : C-Statistic                  241.58     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                  223.23     using 108 bins, spectrum 2, group 2.
+Total fit statistic                           464.81     with 212 d.o.f.
+
+Test statistic : Chi-Squared                  442.59     using 216 bins.
+ Null hypothesis probability of 2.27e-18 with 212 degrees of freedom
+***Warning: New best fit found, fit parameters will be set to new values.
+     2     0.902012     0.925571    (-0.0134301,0.010129)
+***Warning:  *** 3 point fit failed during interpolation *** 
+Lower bound error calculation is invalid.
+Apparent non-monotonicity in statistic space detected.
+Current bracket values 15386, 16381.3
+and delta stat 0.786396, 6.24007
+but latest trial 15708.1 gives 0.382306
+Suggest that you check this result using the steppar command.
+    17      15012.6      15883.6    (-248.113,622.881)
+                                   Parameters
+C-Statistic  |beta|/N    Lvl isothermal:2: isothermal:17 isothermal:18      r1:slope
+463.14       27.67        -1      0.914156       15186.2      0.995897      0.979128
+462.61       82.7148       0      0.914543       15205.2      0.996775      0.978486
+462.382      47.5031       0      0.914811       15212.2      0.997270      0.978120
+==================================================
+ Variances and Principal Axes
+         isothermal:2isothermal:17isothermal:18       r1  
+ 5.2816E-06|  0.8445   0.0000   0.0456   0.5337  
+ 5.7037E-06| -0.5201  -0.0000  -0.1684   0.8374  
+ 6.3890E-04| -0.1281   0.0000   0.9847   0.1185  
+ 1.1610E+05| -0.0000   1.0000  -0.0000   0.0000  
+--------------------------------------------------
+
+================================================
+  Covariance Matrix
+        1           2           3           4   
+   4.447e-05  -1.825e+00  -6.835e-05  -1.483e-05
+  -1.825e+00   1.161e+05  -7.329e-01   3.200e-01
+  -6.835e-05  -7.329e-01   6.243e-04   7.184e-05
+  -1.483e-05   3.200e-01   7.184e-05   1.535e-05
+------------------------------------------------
+
+========================================================================
+Model isothermal:constant<1>*vapec<2> Source No.: 1   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 1
+   1    1   constant   factor              1.00000      frozen
+   2    2   vapec      kT         keV      0.914811     +/-  6.66840E-03  
+   3    2   vapec      He                  1.00000      frozen
+   4    2   vapec      C                   1.00000      frozen
+   5    2   vapec      N                   1.00000      frozen
+   6    2   vapec      O                   1.00000      frozen
+   7    2   vapec      Ne                  1.00000      frozen
+   8    2   vapec      Mg                  1.00000      frozen
+   9    2   vapec      Al                  1.00000      frozen
+  10    2   vapec      Si                  1.00000      frozen
+  11    2   vapec      S                   1.00000      frozen
+  12    2   vapec      Ar                  1.00000      frozen
+  13    2   vapec      Ca                  1.00000      frozen
+  14    2   vapec      Fe                  1.00000      frozen
+  15    2   vapec      Ni                  1.00000      frozen
+  16    2   vapec      Redshift            0.0          frozen
+  17    2   vapec      norm                1.52122E+04  +/-  340.741      
+                           Data group: 2
+  18    1   constant   factor              0.997270     +/-  2.49851E-02  
+  19    2   vapec      kT         keV      0.914811     = isothermal:p2
+  20    2   vapec      He                  1.00000      = isothermal:p3
+  21    2   vapec      C                   1.00000      = isothermal:p4
+  22    2   vapec      N                   1.00000      = isothermal:p5
+  23    2   vapec      O                   1.00000      = isothermal:p6
+  24    2   vapec      Ne                  1.00000      = isothermal:p7
+  25    2   vapec      Mg                  1.00000      = isothermal:p8
+  26    2   vapec      Al                  1.00000      = isothermal:p9
+  27    2   vapec      Si                  1.00000      = isothermal:p10
+  28    2   vapec      S                   1.00000      = isothermal:p11
+  29    2   vapec      Ar                  1.00000      = isothermal:p12
+  30    2   vapec      Ca                  1.00000      = isothermal:p13
+  31    2   vapec      Fe                  1.00000      = isothermal:p14
+  32    2   vapec      Ni                  1.00000      = isothermal:p15
+  33    2   vapec      Redshift            0.0          = isothermal:p16
+  34    2   vapec      norm                1.52122E+04  = isothermal:p17
+________________________________________________________________________
+
+
+Response Parameters:
+
+========================================================================
+Source No.: 1
+Rpar Spectrum Rmodel   Rpar_name  Unit   Value
+
+   1     1    gain     slope             0.978120     +/-  3.91832E-03  
+   2     1    gain     offset            0.0          frozen
+   3     2    gain     slope             0.978120     = p1
+   4     2    gain     offset            0.0          = p2
+________________________________________________________________________
+
+
+Fit statistic  : C-Statistic                  239.83     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                  222.55     using 108 bins, spectrum 2, group 2.
+Total fit statistic                           462.38     with 212 d.o.f.
+
+Test statistic : Chi-Squared                  440.88     using 216 bins.
+ Null hypothesis probability of 3.57e-18 with 212 degrees of freedom
+***Warning: New best fit found, fit parameters will be set to new values.
+***Warning:  *** 3 point fit failed during interpolation *** 
+Lower bound error calculation is invalid.
+     2     0.904707     0.924068    (-0.010104,0.00925774)
+***Warning:  *** 3 point fit failed during interpolation *** 
+Lower bound error calculation is invalid.
+Apparent non-monotonicity in statistic space detected.
+Current bracket values 15415.4, 15787.8
+and delta stat 1.88194, 2.72679
+but latest trial 15572.7 gives 1.80508
+Suggest that you check this result using the steppar command.
+    17      14959.1      15601.6    (-268.117,374.308)
+    18     0.971418      1.02771    (-0.0258525,0.0304446)
