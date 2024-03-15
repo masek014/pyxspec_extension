@@ -466,20 +466,21 @@ Total fit statistic                           464.81     with 212 d.o.f.
 Test statistic : Chi-Squared                  442.59     using 216 bins.
  Null hypothesis probability of 2.27e-18 with 212 degrees of freedom
 ***Warning: New best fit found, fit parameters will be set to new values.
-     2     0.902012     0.925571    (-0.0134301,0.010129)
-***Warning:  *** 3 point fit failed during interpolation *** 
-Lower bound error calculation is invalid.
+     2     0.902016     0.925571    (-0.0134258,0.010129)
+***Warning: Identical values of the parameter give different values of the statistic.
+Please check your result for the low end of the confidence range.
 Apparent non-monotonicity in statistic space detected.
-Current bracket values 15386, 16381.3
-and delta stat 0.786396, 6.24007
-but latest trial 15708.1 gives 0.382306
+Current bracket values 15384.8, 16381.3
+and delta stat 0.783906, 6.24007
+but latest trial 15706 gives 0.538013
 Suggest that you check this result using the steppar command.
-    17      15012.6      15883.6    (-248.113,622.881)
+    17      15012.7        15883    (-248.088,622.286)
                                    Parameters
 C-Statistic  |beta|/N    Lvl isothermal:2: isothermal:17 isothermal:18      r1:slope
 463.14       27.67        -1      0.914156       15186.2      0.995897      0.979128
 462.61       82.7148       0      0.914543       15205.2      0.996775      0.978486
 462.382      47.5031       0      0.914811       15212.2      0.997270      0.978120
+462.382      32.5117      11      0.914811       15212.2      0.997270      0.978120
 ==================================================
  Variances and Principal Axes
          isothermal:2isothermal:17isothermal:18       r1  
@@ -564,12 +565,15 @@ Test statistic : Chi-Squared                  440.88     using 216 bins.
 ***Warning:  *** 3 point fit failed during interpolation *** 
 Lower bound error calculation is invalid.
      2     0.904707     0.924068    (-0.010104,0.00925774)
-***Warning:  *** 3 point fit failed during interpolation *** 
-Lower bound error calculation is invalid.
+Apparent non-monotonicity in statistic space detected.
+Current bracket values 14959.1, 14959
+and delta stat 2.26078, 4.33656
+but latest trial 14959.1 gives 2.26078
+Suggest that you check this result using the steppar command.
 Apparent non-monotonicity in statistic space detected.
 Current bracket values 15415.4, 15787.8
 and delta stat 1.88194, 2.72679
 but latest trial 15572.7 gives 1.80508
 Suggest that you check this result using the steppar command.
-    17      14959.1      15601.6    (-268.117,374.308)
+    17      14959.1      15601.6    (-268.194,374.308)
     18     0.971418      1.02771    (-0.0258525,0.0304446)

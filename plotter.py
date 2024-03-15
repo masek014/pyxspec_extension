@@ -49,7 +49,7 @@ class ModelPlotter():
     # TODO: implement this in the plot_data, plot_model, and plot_residual methods.
     def _initialize_plot(self, model: str, b_set_ticks: bool = True, **kwargs):
 
-        plt.style.use(f'{os.path.dirname(__file__)}/../styles/model.mplstyle')
+        plt.style.use(f'{os.path.dirname(__file__)}/styles/model.mplstyle')
         fig, ax = plt.subplots(**kwargs)
 
         for instrument in self.get_model_instruments(model):
@@ -136,7 +136,7 @@ class ModelPlotter():
         """
 
         if ax is None:
-            plt.style.use(f'{os.path.dirname(__file__)}/../styles/model.mplstyle')
+            plt.style.use(f'{os.path.dirname(__file__)}/styles/model.mplstyle')
             fig, ax = plt.subplots(sharex=True)
 
         if fpm == 'both':
@@ -180,7 +180,7 @@ class ModelPlotter():
     ):
 
         if ax is None:
-            plt.style.use(f'{os.path.dirname(__file__)}/../styles/model.mplstyle')
+            plt.style.use(f'{os.path.dirname(__file__)}/styles/model.mplstyle')
             fig, ax = plt.subplots(sharex=True)
 
         if fpm == 'both':
@@ -235,7 +235,7 @@ class ModelPlotter():
     ):
 
         if ax is None:
-            plt.style.use(f'{os.path.dirname(__file__)}/../styles/model.mplstyle')
+            plt.style.use(f'{os.path.dirname(__file__)}/styles/model.mplstyle')
             fig, ax = plt.subplots(sharex=True)
 
         d_str = ''
@@ -291,9 +291,10 @@ class ModelPlotter():
         """
 
         if axs is None:
-            plt.style.use(f'{os.path.dirname(__file__)}/../styles/model.mplstyle')
+            plt.style.use(f'{os.path.dirname(__file__)}/styles/model.mplstyle')
             fig, axs = plt.subplots(
                 2, 1,
+                figsize=(5,7),
                 sharex=True,
                 layout='constrained',
                 gridspec_kw=dict(height_ratios=[3,1],hspace=0)

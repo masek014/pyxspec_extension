@@ -1,30 +1,35 @@
-font.size         : 16
+font.size           : 12
+legend.fontsize     : 10
 
-figure.figsize    : 8, 12
-figure.dpi        : 240
+figure.figsize      : 4, 4
+figure.dpi          : 240
+savefig.dpi         : 240
 
-axes.titlesize    : 24
-axes.titlepad     : 8
+axes.titlesize      : 12
+axes.titlepad       : 8
 
-lines.linewidth   : 2
-lines.markersize  : 6
+lines.linewidth     : 1
 
-legend.fontsize   : 16
+xtick.top           : True
+xtick.minor.visible : True
+xtick.major.size    : 10
+xtick.minor.size    : 5
+xtick.major.width   : 1
+xtick.minor.width   : 1
+xtick.major.pad     : 10
+xtick.minor.pad     : 10
+xtick.direction     : in
+xtick.color         : black
+xtick.labelcolor    : black
 
-xtick.top         : True
-xtick.major.size  : 8
-xtick.minor.size  : 4
-xtick.major.width : 1
-xtick.minor.width : 1
-xtick.major.pad   : 10
-xtick.minor.pad   : 10
-xtick.direction   : in
-
-ytick.right       : True
-ytick.major.size  : 10
-ytick.minor.size  : 4
-ytick.major.width : 1
-ytick.minor.width : 1
-ytick.major.pad   : 10
-ytick.minor.pad   : 10
-ytick.direction   : in
+ytick.right         : True
+ytick.minor.visible : True
+ytick.major.size    : 10
+ytick.minor.size    : 5
+ytick.major.width   : 1
+ytick.minor.width   : 1
+ytick.major.pad     : 10
+ytick.minor.pad     : 10
+ytick.direction     : in
+ytick.color         : black
+ytick.labelcolor    : black
