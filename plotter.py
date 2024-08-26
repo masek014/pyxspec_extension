@@ -147,7 +147,8 @@ class ModelPlotter():
         for fpm in fpms:
             default_kwargs = dict(
                 ls = 'None',
-                color = FPM_COLORS[fpm]
+                color = FPM_COLORS[fpm],
+                label=f'{fpm} data',
             )
             fpm_kwargs = {**default_kwargs, **kwargs}
 
@@ -161,7 +162,6 @@ class ModelPlotter():
             ax.errorbar(
                 energy, data_arr,
                 xerr=energy_err, yerr=data_err,
-                label=f'{fpm} data',
                 **fpm_kwargs
             )
             ax.set(ylabel=f'Spectrum [{arrays.data.unit}]')
@@ -328,8 +328,6 @@ class ModelPlotter():
         locmin = LogLocator(base=10.0, subs=(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9), numticks=10)
         axs[0].yaxis.set_minor_locator(locmin)
         axs[0].yaxis.set_minor_formatter(NullFormatter())
-
-        axs[0].legend()
 
         # Remove duplicate tick labels on shared x-axis.
         plt.setp(axs[0].get_xticklabels(), visible=False)

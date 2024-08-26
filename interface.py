@@ -13,7 +13,7 @@ import xspec
 
 from .config.configuration import XSPECConfiguration
 from .custom_models import add_all_custom_models
-from .plotter import compute_durbin_watson_statistic
+# from .plotter import compute_durbin_watson_statistic
 
 
 # TODO: Make the interface class use the ModelPlotter class?
@@ -520,6 +520,9 @@ class Instrument:
     pileup_file: str = None
     pileup_data_group: int = None
     pileup_source: int = None
+    background_file: str = None
+    background_data_group: int = None
+    background_source: int = None
 
 
     # TODO: Better way of getting these keywords?
@@ -528,12 +531,20 @@ class Instrument:
         with fits.open(self.signal_file) as hdu:
             respfile = hdu[1].header['RESPFILE']
         return respfile
-    
+
 
     @property
     def pileup_response_file(self) -> str | None:
         if self.pileup_file is not None:
             with fits.open(self.pileup_file) as hdu:
+                respfile = hdu[1].header['RESPFILE']
+            return respfile
+
+
+    @property
+    def background_response_file(self) -> str | None:
+        if self.background_file is not None:
+            with fits.open(self.background_file) as hdu:
                 respfile = hdu[1].header['RESPFILE']
             return respfile
 
@@ -547,12 +558,24 @@ class Instrument:
     def pileup_spectrum(self) -> xspec.Spectrum:
         if self.pileup_data_group is not None:
             return xspec.AllData(self.pileup_data_group)
+        
+
+    @property
+    def background_spectrum(self) -> xspec.Spectrum:
+        if self.background_data_group is not None:
+            return xspec.AllData(self.background_data_group)
 
 
     @property
     def pileup_model_name(self) -> str | None:
         if self.pileup_file is not None:
             return f'pileup{self.name}'.replace(' ', '')
+        
+
+    @property
+    def background_model_name(self) -> str | None:
+        if self.background_file is not None:
+            return f'background'.replace(' ', '')
 
     
     def get_signal_model(self, model_name: str) -> xspec.Model:
@@ -562,6 +585,11 @@ class Instrument:
     def get_pileup_model(self) -> xspec.Model | None:
         if self.pileup_file is not None:
             return xspec.AllModels(self.pileup_data_group, self.pileup_model_name)
+        
+    
+    def get_background_model(self) -> xspec.Model | None:
+        if self.background_file is not None:
+            return xspec.AllModels(self.background_data_group, self.background_model_name)
 
 
 class XSPECInterface:
@@ -580,18 +608,23 @@ class XSPECInterface:
         self.pileup_sources = OrderedDict()
         self.pileup_groups = []
         self.pileup_expression = ''
+        self.background_sources = OrderedDict()
+        self.background_groups = []
+        self.background_expression = ''
 
 
     @property
     def num_groups(self) -> int:
-        return len(self.signal_groups) + len(self.pileup_groups)
+        return len(self.signal_groups) + len(self.pileup_groups) + len(self.background_groups)
 
 
     def add_instrument(
         self,
         name: str,
         signal_file: str,
-        pileup_file: str = None
+        pileup_file: str = None,
+        background_file: str = None,
+        link_background: bool = False
     ):
         """
         TODO: if we wanted to allow separate pileup models for each
@@ -610,18 +643,42 @@ class XSPECInterface:
         pileup_kwargs = {}
         if pileup_file is not None:
             group_num = self.num_groups + 1
-            self.pileup_sources[len(self.pileup_sources)+2] = name
+            source_num = len(self.pileup_sources) + len(self.background_sources) + 2
+            self.pileup_sources[source_num] = name
             self.pileup_groups.append(group_num)
             pileup_kwargs = dict(
                 pileup_file = pileup_file,
                 pileup_data_group = group_num,
-                pileup_source = len(self.pileup_sources)+1
+                pileup_source = source_num
             )
 
-        self.instruments[name] = Instrument(name, **signal_kwargs, **pileup_kwargs)
+        background_kwargs = {}
+        if background_file is not None:
+            group_num = self.num_groups + 1
+
+            # Make all backgrounds the same model... need to change this.
+            if len(self.background_sources) > 0:
+                source_num = list(self.background_sources.keys())[0]
+            else:
+                source_num = len(self.pileup_sources) + len(self.background_sources) + 2
+            self.background_sources[source_num] = name
+            self.background_groups.append(group_num)
+            background_kwargs = dict(
+                background_file = background_file,
+                background_data_group = group_num,
+                background_source = source_num
+            )
+
+        self.instruments[name] = Instrument(
+            name,
+            **signal_kwargs,
+            **pileup_kwargs,
+            **background_kwargs
+        )
         print('Instrument:', name)
         print('\t', signal_kwargs)
         print('\t', pileup_kwargs)
+        print('\t', background_kwargs)
 
 
     def _configure_responses(self):
@@ -634,24 +691,50 @@ class XSPECInterface:
             if instrument.pileup_file is not None:
                 pileup = True
                 break
+        
+        background = False
+        for instrument in self.instruments.values():
+            if instrument.background_file is not None:
+                background = True
+                break
 
+        num_sources = len(self.pileup_sources) + len(self.background_sources) + 1
+        # TODO: could consolidate this?
         if pileup:
             for instrument in self.instruments.values():
                 signal_spectrum = instrument.signal_spectrum
                 signal_spectrum.multiresponse[0] = instrument.signal_response_file
-                for source_num in range(1, len(self.pileup_sources) + 1):
+                for source_num in range(1, num_sources):
                     signal_spectrum.multiresponse[source_num] = 'none'
-                    print(f'signal_spectrum.multiresponse[{source_num}] = "none"')
+                    print(f'{instrument.name} signal_spectrum.multiresponse[{source_num}] = "none"')
 
                 pileup_spectrum = instrument.pileup_spectrum
                 if pileup_spectrum is not None:
-                    for source_num in range(0, len(self.pileup_sources) + 1):
+                    for source_num in range(0, num_sources):
                         if source_num != instrument.pileup_source - 1:
                             pileup_spectrum.multiresponse[source_num] = 'none'
-                            print(f'pileup_spectrum.multiresponse[{source_num}] = "none"')
+                            print(f'{instrument.name} pileup_spectrum.multiresponse[{source_num}] = "none"')
                         else:
                             pileup_spectrum.multiresponse[source_num] = instrument.pileup_response_file
-                            print(f'pileup_spectrum.multiresponse[{source_num}] = {instrument.pileup_response_file}')
+                            print(f'{instrument.name} pileup_spectrum.multiresponse[{source_num}] = {instrument.pileup_response_file}')
+
+        if background:
+            for instrument in self.instruments.values():
+                signal_spectrum = instrument.signal_spectrum
+                signal_spectrum.multiresponse[0] = instrument.signal_response_file
+                for source_num in range(1, num_sources):
+                    signal_spectrum.multiresponse[source_num] = 'none'
+                    print(f'{instrument.name} signal_spectrum.multiresponse[{source_num}] = "none"')
+
+                background_spectrum = instrument.background_spectrum
+                if background_spectrum is not None:
+                    for source_num in range(0, num_sources):
+                        if source_num != instrument.background_source - 1:
+                            background_spectrum.multiresponse[source_num] = 'none'
+                            print(f'{instrument.name} background_spectrum.multiresponse[{source_num}] = "none"')
+                        else:
+                            background_spectrum.multiresponse[source_num] = instrument.background_response_file
+                            print(f'{instrument.name} background_spectrum.multiresponse[{source_num}] = {instrument.background_response_file}')
     
     
     def clear_data(self):
@@ -660,6 +743,8 @@ class XSPECInterface:
         self.signal_groups = []
         self.pileup_groups = []
         self.pileup_sources = OrderedDict()
+        self.background_groups = []
+        self.background_sources = OrderedDict()
 
 
     def read_data(self, data_dir: str):
@@ -679,6 +764,8 @@ class XSPECInterface:
             data_str += f'{instrument.signal_data_group}:{instrument.signal_data_group} {instrument.signal_file} '
             if instrument.pileup_file is not None:
                 data_str += f'{instrument.pileup_data_group}:{instrument.pileup_data_group} {instrument.pileup_file} '
+            if instrument.background_file is not None:
+                data_str += f'{instrument.background_data_group}:{instrument.background_data_group} {instrument.background_file} '
 
         orig_dir = os.getcwd()
         os.chdir(data_dir)
@@ -728,6 +815,18 @@ class XSPECInterface:
                 self.archive.add_model(instrument.name, archived_pileup_model)
                 newly_archived[instrument.name] = {'pileup': archived_pileup_model}
 
+            if instrument.background_file is not None:
+                archived_background_model = ArchivedModel(
+                    instrument.name,
+                    instrument.background_source,
+                    instrument.background_data_group,
+                    instrument.get_background_model(),
+                    instrument.background_file,
+                    self.out_dir
+                )
+                self.archive.add_model(instrument.name, archived_background_model)
+                newly_archived[instrument.name] = {'background': archived_background_model}
+
         print('newly_archived:', newly_archived)
         if CONFIG.debug:
             for instrument, models in newly_archived.items():
@@ -761,6 +860,9 @@ class XSPECInterface:
         if self.pileup_expression:
             new = f'{self.pileup_expression} + {new}'
 
+        if self.background_expression:
+            new = f'{self.background_expression} + {new}'
+
         return new
 
 
@@ -775,7 +877,25 @@ class XSPECInterface:
         self.pileup_expression = expression
         for source, instrument_name in self.pileup_sources.items():
             instrument = self.instruments[instrument_name]
+            print(expression, instrument.pileup_model_name, source)
             model = xspec.Model(expression, instrument.pileup_model_name, source)
+            models.append(model)
+        
+        return models
+    
+
+    def set_background_model(self, expression: str) -> list[xspec.Model]:
+        """
+        Applies the given expression to ALL instrument background models.
+        Currently, individual instrument background models cannot be set
+        due to how the sources are handled.
+        """
+
+        models = []
+        self.background_expression = expression
+        for source, instrument_name in self.background_sources.items():
+            instrument = self.instruments[instrument_name]
+            model = xspec.Model(expression, instrument.background_model_name, source)
             models.append(model)
         
         return models
@@ -812,6 +932,40 @@ class XSPECInterface:
                     parameter = component.__dict__[parameter_name]
                     parameter.values = '0 0 0 0 0 0'
                     parameter.frozen = True
+
+
+    def _set_background_links(self):
+        """
+        Links the parameters signal's background model's component(s) parameters
+        to the corresponding parameters of the background model.
+        """
+
+        no_background_instruments = []
+        for instrument in self.instruments.values():
+            signal_model = instrument.get_signal_model(self.current_model)
+            background_model = instrument.get_background_model()
+            if background_model is not None:
+                ref_model = background_model
+                for component_name in background_model.componentNames:
+                    component = background_model.__dict__[component_name]
+                    for parameter_name in component.parameterNames:
+                        parameter = component.__dict__[parameter_name]
+                        signal_model.__dict__[component_name].__dict__[parameter_name].link = parameter
+            else:
+                no_background_instruments.append(instrument)
+
+        # Set all signal parameters corresponding to the background model to zero.
+        # TODO: See if we can do this better.
+        for instrument in no_background_instruments:
+            signal_model = instrument.get_signal_model(self.current_model)
+            background_component_names = ref_model.componentNames
+            for component_name in background_component_names:
+                component = signal_model.__dict__[component_name]
+                for parameter_name in component.parameterNames:
+                    parameter = component.__dict__[parameter_name]
+                    parameter.values = '0 0 0 0 0 0'
+                    parameter.frozen = True
+
 
     def add_component(
         self,
@@ -859,6 +1013,8 @@ class XSPECInterface:
         self._set_parameter_limits(parameter_limits_file, tie_data_groups)
         if self.pileup_expression:
             self._set_pileup_links()
+        if self.background_expression:
+            self._set_background_links()
 
         if archived_models:
             archived_models_it = iter(archived_models)
@@ -886,19 +1042,53 @@ class XSPECInterface:
                             print('freeze previous:', freeze_previous)
                             print(f'applying {parameter_name} values to component {new_component.name} of new model {model.name}. frozen: {parameter.frozen}, {parameter.values}')
 
+        # TODO: see if we can do this better.
+        # Configure the factors to be correct.
+        # This might just need to be something that doesn't get handled
+        # in the class because it's very specific to the behavior I want.
         first_group = self.signal_groups[0]
-        if 'constant' in xspec.AllModels(first_group, self.current_model).componentNames:
-            
+        current_model = xspec.AllModels(first_group, self.current_model)
+        if 'constant' in current_model.componentNames:
+
+            # Identify which constant to change, if there are multiple.
+            for component_name in current_model.componentNames:
+                if 'constant' in component_name:
+                    component = current_model.__dict__[component_name]
+                    if not component.factor.link:
+                        constant_to_change = component_name
+                        break
+
             # Freeze the factor for spectrum 1.
-            xspec.AllModels(first_group, self.current_model).constant.factor.link = ''
-            xspec.AllModels(first_group, self.current_model).constant.factor.frozen = True
+            # print(self.current_model)
+            # print(current_model)
+            print(f'freezing signal factor for group {first_group} in model {self.current_model}')
+            current_model.__dict__[constant_to_change].factor.link = ''
+            current_model.__dict__[constant_to_change].factor.frozen = True
 
             # Free the offset factor between the groups (spectra).
             for group_num in self.signal_groups:
                 if group_num != first_group:
-                    xspec.AllModels(group_num, self.current_model).constant.factor = 1.0
-                    xspec.AllModels(group_num, self.current_model).constant.factor.link = ''
-                    xspec.AllModels(group_num, self.current_model).constant.factor.frozen = False
+                    current_model = xspec.AllModels(group_num, self.current_model).__dict__[constant_to_change].factor = 1.0
+                    current_model = xspec.AllModels(group_num, self.current_model).__dict__[constant_to_change].factor.link = ''
+                    current_model = xspec.AllModels(group_num, self.current_model).__dict__[constant_to_change].factor.frozen = False
+        
+        if len(self.background_groups) != 0:
+            background_group = self.background_groups[0]
+            print('background group:', background_group)
+            if 'constant' in xspec.AllModels(background_group, 'background').componentNames:
+                
+                # Freeze the factor for first group.
+                print(f'freezing background factor for group {background_group}')
+                xspec.AllModels(background_group, 'background').constant.factor.link = ''
+                xspec.AllModels(background_group, 'background').constant.factor.frozen = True
+
+                # Free the offset factor between the groups (spectra).
+                for group_num in self.background_groups:
+                    if group_num != background_group:
+                        print(f'freeing background factor for group {group_num}')
+                        xspec.AllModels(group_num, 'background').constant.factor = 1.0
+                        xspec.AllModels(group_num, 'background').constant.factor.link = ''
+                        xspec.AllModels(group_num, 'background').constant.factor.frozen = False
         
         return model
 
