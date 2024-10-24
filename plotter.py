@@ -230,6 +230,7 @@ class ModelPlotter():
         self,
         model: str,
         ax: plt.Axes = None,
+        fpm: str = 'both',
         add_dw_stat: bool = False,
         **kwargs
     ):
@@ -238,8 +239,13 @@ class ModelPlotter():
             plt.style.use(f'{os.path.dirname(__file__)}/styles/model.mplstyle')
             fig, ax = plt.subplots(sharex=True)
 
+        if fpm == 'both':
+            fpms = self.get_model_instruments(model)
+        else:
+            fpms = [fpm]
+
         d_str = ''
-        for fpm in self.get_model_instruments(model):
+        for fpm in fpms:
 
             default_kwargs = dict(
                 ls = 'None',
@@ -262,7 +268,7 @@ class ModelPlotter():
             ax.errorbar(
                 energy, residual,
                 xerr=energy_err,
-                yerr=1,
+                # yerr=1,
                 **fpm_kwargs
             )
             ax.set(ylabel='(data-model)/err')

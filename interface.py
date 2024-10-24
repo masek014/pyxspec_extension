@@ -45,9 +45,9 @@ MODEL_COMPONENT_MAPPING = dict(
     ),
     bknpower      = dict(
         PhoIndx1  = ('lower_index'  , u.Unit()),
-        BreakE    = ('break_energy' , u.keV),
+        BreakE    = ('$E_B$' , u.keV),
         PhoIndx2  = ('index'        , u.Unit()),
-        norm      = ('specnorm'     , u.ph/u.keV/(u.cm**2)/u.s)
+        norm      = ('norm'     , u.ph/u.keV/(u.cm**2)/u.s)
     ),
     expmodgauss   = dict( # TODO: FIGURE OUT UNITS!!!
         norm      = ('expmodgauss_norm', u.Unit()),
@@ -250,6 +250,48 @@ class ArchivedComponent():
         
         return parameters
 
+    @property
+    def parameter_string(self) -> str:
+
+        for parameter in self.parameters:
+            value = parameter.quantity
+            errors = np.array([*parameter.error[0:2]]) * parameter.unit
+            errors -= value
+
+            if self.base_name in PARAMETER_CONVERSIONS:
+                conversions = PARAMETER_CONVERSIONS[self.base_name]
+                if parameter.name in conversions:
+                    value *= conversions[parameter.name]
+                    errors *= conversions[parameter.name]
+
+            # Scientific notation is used based on order of magnitude.
+            if value.value >= 1000:
+                str_format = '{:0.{prec}E}'
+            else:
+                str_format = '{:0.{prec}f}'
+
+            # Determine prec, which represents the number of decimal places.
+            mantissa = errors[1].value % 1
+            prec = 1
+            if mantissa != 0:
+                while (mantissa * 10 ** prec) < 1 and prec < 4:
+                    prec += 1
+
+            value_str = str_format.format(value.value, prec=prec)
+            error_low = str_format.format(errors[0].value, prec=prec)
+            error_high = str_format.format(errors[1].value, prec=prec)
+            error_str = rf'$_{{{error_low}}}^{{+{error_high}}}$'
+
+            mapping = MODEL_COMPONENT_MAPPING[self.base_name]
+            param_name = mapping[parameter.name][0]
+            unit_str = f'[{value.unit}]'
+            if value.unit == u.Unit():
+                unit_str = ''
+            
+            full_string += f'{param_name.upper()}: {value_str}{error_str} {unit_str}\n'
+        
+        return full_string
+
 
 # TODO: Add the model components and full model to this. (idr what this means)
 class ArchivedModel():
@@ -330,6 +372,7 @@ class ArchivedModel():
                 errors = np.array([*parameter.error[0:2]]) * parameter.unit
                 errors -= value
 
+                # TODO: should we make this use the parameter_string property from ArchivedComponent?
                 if component.base_name in PARAMETER_CONVERSIONS:
                     conversions = PARAMETER_CONVERSIONS[component.base_name]
                     if parameter.name in conversions:
