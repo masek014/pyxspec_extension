@@ -319,7 +319,6 @@ class ArchivedModel():
         self._archive_response()
         self._archive_arrays()
 
-
     @property
     def free_parameters(self) -> dict[str, list[ArchivedParameter]]:
         
@@ -329,7 +328,6 @@ class ArchivedModel():
             parameters[component] = component.free_parameters
         
         return parameters
-
 
     @property
     def free_response_parameters(self) -> list[ArchivedParameter]:
@@ -341,13 +339,11 @@ class ArchivedModel():
                     rparameters.append(rparameter)
 
         return rparameters
-    
 
     @property
     def fit_statistic_string(self) -> str:
         return f'{self.label} CSTAT: {self.statistic:0.1f} ({self.bins} bins)'
 
-    
     @property
     def parameter_string(self) -> str:
 
@@ -407,7 +403,6 @@ class ArchivedModel():
 
         return full_string
     
-
     @property
     def response_parameter_string(self) -> str:
         
@@ -420,7 +415,6 @@ class ArchivedModel():
                 full_string += f'\nGAIN OFFSET: {self.gain_offset.value:0.3f}'
         
         return full_string
-
 
     def _archive_components(self, model: xspec.Model):
         """
@@ -442,7 +436,6 @@ class ArchivedModel():
             self.components[component_name] = component
             setattr(self, component_name, component)
 
-
     def _archive_response(self):
         """
         Archives the response parameters, if active.
@@ -461,7 +454,6 @@ class ArchivedModel():
                 self.response_parameters[parameter_name] = parameter
                 setattr(self, new_parameter_name, parameter)
 
-
     def _archive_arrays(self):
         """
         Archives the data arrays, i.e. the data for plotting.
@@ -469,7 +461,6 @@ class ArchivedModel():
 
         self.arrays = gather_model_data(self.name, self.data_group)
         self.bins = int(len(self.arrays.energy))
-
 
     def _component_is_active(self, component: xspec.Component) -> bool:
 
@@ -487,11 +478,9 @@ class ArchivedModel():
 class Archive():
     instruments: dict[str, OrderedDict[str, ArchivedModel]] = field(default_factory=dict)
 
-
     def last_instrument_model(self, instrument: str) -> ArchivedModel:
         last = next(reversed(self.instruments[instrument]))
         return self.instruments[instrument][last]
-
 
     def add_model(self, instrument: str, model: ArchivedModel):
 
@@ -504,7 +493,6 @@ class Archive():
         else:
             print(f'WARNING: model \'{model.name}\' already in Archive for instrument {instrument}. Not doing anything.')
     
-
     def save(self, pickle_path: str):
         """
         Saves self to the provided pickle path. This is intended to be used
@@ -514,7 +502,6 @@ class Archive():
         with open(pickle_path, 'wb') as outfile:
             pickle.dump(self, outfile, 2)
 
-
     @classmethod
     def load(cls, pickle_path: str):
         """
@@ -523,7 +510,6 @@ class Archive():
         
         with open(pickle_path, 'rb') as infile:
             return pickle.load(infile)
-
 
     def make_model_string(self, model: str) -> str:
         
@@ -543,7 +529,6 @@ class Archive():
         full_str += '\n'.join(response_strs)
 
         return full_str
-    
 
     def make_multimodel_string(self, models: list[str]) -> str:
 
@@ -567,14 +552,12 @@ class Instrument:
     background_data_group: int = None
     background_source: int = None
 
-
     # TODO: Better way of getting these keywords?
     @property
     def signal_response_file(self) -> str:
         with fits.open(self.signal_file) as hdu:
             respfile = hdu[1].header['RESPFILE']
         return respfile
-
 
     @property
     def pileup_response_file(self) -> str | None:
@@ -583,7 +566,6 @@ class Instrument:
                 respfile = hdu[1].header['RESPFILE']
             return respfile
 
-
     @property
     def background_response_file(self) -> str | None:
         if self.background_file is not None:
@@ -591,48 +573,42 @@ class Instrument:
                 respfile = hdu[1].header['RESPFILE']
             return respfile
 
-
     @property
     def signal_spectrum(self) -> xspec.Spectrum:
         return xspec.AllData(self.signal_data_group)
-    
 
     @property
     def pileup_spectrum(self) -> xspec.Spectrum:
         if self.pileup_data_group is not None:
             return xspec.AllData(self.pileup_data_group)
         
-
     @property
     def background_spectrum(self) -> xspec.Spectrum:
         if self.background_data_group is not None:
             return xspec.AllData(self.background_data_group)
-
 
     @property
     def pileup_model_name(self) -> str | None:
         if self.pileup_file is not None:
             return f'pileup{self.name}'.replace(' ', '')
         
-
     @property
     def background_model_name(self) -> str | None:
         if self.background_file is not None:
             return f'background'.replace(' ', '')
 
-    
     def get_signal_model(self, model_name: str) -> xspec.Model:
         return xspec.AllModels(self.signal_data_group, model_name)
-    
 
     def get_pileup_model(self) -> xspec.Model | None:
         if self.pileup_file is not None:
             return xspec.AllModels(self.pileup_data_group, self.pileup_model_name)
-        
-    
+
     def get_background_model(self) -> xspec.Model | None:
         if self.background_file is not None:
             return xspec.AllModels(self.background_data_group, self.background_model_name)
+
+    # TODO: Add methods/properties to get the pileup and background components in the signal.
 
 
 class XSPECInterface:
@@ -673,6 +649,8 @@ class XSPECInterface:
         TODO: if we wanted to allow separate pileup models for each
         instrument, we would need to set different signal sources
         for each instrument. Right now, this cannot be done.
+
+        TODO: implement link_background
         """
     
         group_num = self.num_groups + 1
@@ -830,21 +808,24 @@ class XSPECInterface:
             return newly_archived
         
         for instrument in self.instruments.values():
-            
+
             try:
+                newly_archived[instrument.name] = {}
                 instrument.get_signal_model(self.current_model)
             except Exception as e:
                 continue
-            archived_signal_model = ArchivedModel(
-                instrument.name,
-                instrument.signal_source,
-                instrument.signal_data_group,
-                instrument.get_signal_model(self.current_model),
-                instrument.signal_file,
-                self.out_dir
-            )
-            self.archive.add_model(instrument.name, archived_signal_model)
-            newly_archived[instrument.name] = {'signal': archived_signal_model}
+            
+            if instrument.background_file is not None:
+                archived_background_model = ArchivedModel(
+                    instrument.name,
+                    instrument.background_source,
+                    instrument.background_data_group,
+                    instrument.get_background_model(),
+                    instrument.background_file,
+                    self.out_dir
+                )
+                self.archive.add_model(instrument.name, archived_background_model)
+                newly_archived[instrument.name]['background'] = archived_background_model
 
             if instrument.pileup_file is not None:
                 archived_pileup_model = ArchivedModel(
@@ -856,19 +837,19 @@ class XSPECInterface:
                     self.out_dir
                 )
                 self.archive.add_model(instrument.name, archived_pileup_model)
-                newly_archived[instrument.name] = {'pileup': archived_pileup_model}
+                newly_archived[instrument.name]['pileup'] = archived_pileup_model
 
-            if instrument.background_file is not None:
-                archived_background_model = ArchivedModel(
-                    instrument.name,
-                    instrument.background_source,
-                    instrument.background_data_group,
-                    instrument.get_background_model(),
-                    instrument.background_file,
-                    self.out_dir
-                )
-                self.archive.add_model(instrument.name, archived_background_model)
-                newly_archived[instrument.name] = {'background': archived_background_model}
+            archived_signal_model = ArchivedModel(
+                instrument.name,
+                instrument.signal_source,
+                instrument.signal_data_group,
+                instrument.get_signal_model(self.current_model),
+                instrument.signal_file,
+                self.out_dir
+            )
+            self.archive.add_model(instrument.name, archived_signal_model)
+            newly_archived[instrument.name]['signal'] = archived_signal_model
+
 
         print('newly_archived:', newly_archived)
         if CONFIG.debug:
@@ -889,22 +870,23 @@ class XSPECInterface:
 
         if 'const*' in new:
             new = new.replace('const*', 'constant*')
-        if old:
-            if 'constant' in old:
-                old = f' {old}' # Prefix space to work with formats
-                p = parse.parse(CONSTANT_EXPRESSION_PAREN, old)
-                if p is None:
-                    p = parse.parse(CONSTANT_EXPRESSION_NO_PAREN, old)
-                p.named['inner'] = f'{p.named["inner"]} + {new}'
-                new = CONSTANT_EXPRESSION_PAREN.format(**p.named)
-            else:
-                new = f'{old} + {new}'
 
         if self.pileup_expression:
             new = f'{self.pileup_expression} + {new}'
 
         if self.background_expression:
             new = f'{self.background_expression} + {new}'
+        
+        if old:
+            # if 'constant' in old:
+            #     old = f' {old}' # Prefix space to work with formats
+            #     p = parse.parse(CONSTANT_EXPRESSION_PAREN, old)
+            #     if p is None:
+            #         p = parse.parse(CONSTANT_EXPRESSION_NO_PAREN, old)
+            #     p.named['inner'] = f'{p.named["inner"]} + {new}'
+            #     new = CONSTANT_EXPRESSION_PAREN.format(**p.named)
+            # else:
+                new = f'{old} + {new}'
 
         return new
 
@@ -914,6 +896,8 @@ class XSPECInterface:
         Applies the given expression to ALL instrument pileup models.
         Currently, individual instrument pileup models cannot be set
         due to how the sources are handled.
+
+        This model is fit simultaneous to the other models.
         """
 
         models = []
@@ -932,6 +916,8 @@ class XSPECInterface:
         Applies the given expression to ALL instrument background models.
         Currently, individual instrument background models cannot be set
         due to how the sources are handled.
+
+        This model is fit simultaneous to the other models.
         """
 
         models = []
@@ -946,7 +932,7 @@ class XSPECInterface:
 
     def _set_pileup_links(self):
         """
-        Links the parameters signal's pileup model's component(s) parameters
+        Links the parameters signal's pileup model component(s) parameters
         to the corresponding parameters of the pileup model.
         """
 
@@ -958,9 +944,10 @@ class XSPECInterface:
                 ref_model = pileup_model
                 for component_name in pileup_model.componentNames:
                     component = pileup_model.__dict__[component_name]
+                    signal_component_name = instrument.pileup_components_in_signal[component_name]
                     for parameter_name in component.parameterNames:
                         parameter = component.__dict__[parameter_name]
-                        signal_model.__dict__[component_name].__dict__[parameter_name].link = parameter
+                        signal_model.__dict__[signal_component_name].__dict__[parameter_name].link = parameter
             else:
                 no_pileup_instruments.append(instrument)
 
@@ -970,7 +957,8 @@ class XSPECInterface:
             signal_model = instrument.get_signal_model(self.current_model)
             pileup_component_names = ref_model.componentNames
             for component_name in pileup_component_names:
-                component = signal_model.__dict__[component_name]
+                signal_component_name = instrument.pileup_components_in_signal[component_name]
+                component = signal_model.__dict__[signal_component_name]
                 for parameter_name in component.parameterNames:
                     parameter = component.__dict__[parameter_name]
                     parameter.values = '0 0 0 0 0 0'
@@ -979,7 +967,7 @@ class XSPECInterface:
 
     def _set_background_links(self):
         """
-        Links the parameters signal's background model's component(s) parameters
+        Links the parameters signal's background model component(s) parameters
         to the corresponding parameters of the background model.
         """
 
@@ -991,11 +979,13 @@ class XSPECInterface:
                 ref_model = background_model
                 for component_name in background_model.componentNames:
                     component = background_model.__dict__[component_name]
+                    signal_component_name = instrument.background_components_in_signal[component_name]
                     for parameter_name in component.parameterNames:
                         parameter = component.__dict__[parameter_name]
-                        signal_model.__dict__[component_name].__dict__[parameter_name].link = parameter
+                        signal_model.__dict__[signal_component_name].__dict__[parameter_name].link = parameter
             else:
                 no_background_instruments.append(instrument)
+        print('ref_model:', ref_model)
 
         # Set all signal parameters corresponding to the background model to zero.
         # TODO: See if we can do this better.
@@ -1003,7 +993,8 @@ class XSPECInterface:
             signal_model = instrument.get_signal_model(self.current_model)
             background_component_names = ref_model.componentNames
             for component_name in background_component_names:
-                component = signal_model.__dict__[component_name]
+                signal_component_name = instrument.background_components_in_signal[component_name]
+                component = signal_model.__dict__[signal_component_name]
                 for parameter_name in component.parameterNames:
                     parameter = component.__dict__[parameter_name]
                     parameter.values = '0 0 0 0 0 0'
@@ -1019,6 +1010,12 @@ class XSPECInterface:
         freeze_previous: bool = False,
         tie_data_groups: bool = True,
     ) -> xspec.Model:
+        """
+        Adds a new expression to the overall model.
+        Allows adding new components to an already existing model.
+
+        TODO: this is a mess. Need to clean up.
+        """
         
         self.out_dir = out_dir
         if not os.path.exists(self.out_dir):
@@ -1037,15 +1034,15 @@ class XSPECInterface:
         # the user doing so.
         archived_models = {}
         if self.archive.instruments:
-            for k in (self.archive.instruments).keys():
-                model_name = next(reversed(self.archive.instruments[k]))
-                archived_models[k] = self.archive.instruments[k][model_name]
-                print('Recently archived model:', k, model_name)
-            old_expression = archived_models[k].expression
+            for instrument in self.archive.instruments:
+                model_name = next(reversed(self.archive.instruments[instrument]))
+                archived_models[instrument] = self.archive.instruments[instrument][model_name]
+                print('Recently archived model:', instrument, model_name)
+            old_expression = archived_models[instrument].expression
         else:
             old_expression = ''
-        
-        # Setup the new model
+
+        # Set up the new model.
         new_expression = self._configure_new_expression(expression, old_expression)
         print(f'Adding new component {self.current_model} with expression {expression}')
         print('Full expression is now', new_expression)
@@ -1054,36 +1051,78 @@ class XSPECInterface:
         # TODO: Create some way of setting pileup parameter limits?
         print('parameter limits file:', parameter_limits_file)
         self._set_parameter_limits(parameter_limits_file, tie_data_groups)
-        if self.pileup_expression:
-            self._set_pileup_links()
-        if self.background_expression:
-            self._set_background_links()
+        
+        all_components = [c for c in model.componentNames]
+        print('all_components:', all_components)
 
+        # Add the archived components to the new model.
         if archived_models:
             archived_models_it = iter(archived_models)
             for group_num in self.signal_groups:
                 current_model = xspec.AllModels(group_num, self.current_model)
                 archived_model = archived_models[next(archived_models_it)]
                 for old_component in archived_model.components.values():
-                    if old_component.name == 'constant' and group_num == 1:
-                        continue
+                    # if old_component.name == 'constant' and group_num == 1:
+                    #     continue
                     new_component = current_model.__dict__[old_component.name]
+                    if old_component.name in all_components:
+                        all_components.remove(old_component.name)
+                        print(f'removing {old_component.name} from all_components')
                     print(f'reading parameters from component {old_component.name} of archived model', archived_model.name)
                     for parameter_name in new_component.parameterNames:
                         print(parameter_name)
                         if parameter_name in old_component.parameters:
                             old_parameter = old_component.parameters[parameter_name]
-                            print(parameter_name, old_parameter.link)
+                            print(f'parameter {parameter_name} linked to {old_parameter.link}')
                             parameter = new_component.__dict__[parameter_name]
-                            if old_parameter.link:
-                                print(f'old parameter {parameter_name} in old model is linked. skipping')
-                                continue
+                            # if old_parameter.link:
+                            #     print(f'old parameter {parameter_name} in old model is linked. skipping')
+                            #     continue
                             parameter.values = old_parameter.values
                             # parameter.error = old_parameter.error # TODO: Figure out how to set this.
                             parameter.frozen = old_parameter.frozen or freeze_previous
                             print(f'parameter {parameter_name} frozen:', old_parameter.frozen)
                             print('freeze previous:', freeze_previous)
                             print(f'applying {parameter_name} values to component {new_component.name} of new model {model.name}. frozen: {parameter.frozen}, {parameter.values}')
+
+        # all_components is now only the new components in the signal model
+        to_remove = []
+        for instrument in self.instruments.values():
+            instrument.pileup_components_in_signal = {}
+            for component_name in all_components:
+                if instrument.get_pileup_model() is not None:
+                    for pileup_component in instrument.get_pileup_model().componentNames:
+                        print(f'pileup_component {pileup_component} in {instrument.name}')
+                        if pileup_component not in instrument.pileup_components_in_signal and pileup_component in component_name:
+                            instrument.pileup_components_in_signal[pileup_component] = component_name
+                            if component_name not in to_remove:
+                                to_remove.append(component_name)
+            print('instrument.pileup_components_in_signal:', instrument.pileup_components_in_signal)
+        print('to_remove:', to_remove)
+        all_components = [c for c in all_components if c not in to_remove]
+        print('remaining components:', all_components)
+
+        to_remove = []
+        for instrument in self.instruments.values():
+            instrument.background_components_in_signal = {}
+            for component_name in all_components:
+                if instrument.get_background_model() is not None:
+                    for background_component in instrument.get_background_model().componentNames:
+                        if background_component not in instrument.background_components_in_signal and background_component in component_name:
+                            instrument.background_components_in_signal[background_component] = component_name
+                            if component_name not in to_remove:
+                                to_remove.append(component_name)
+            print('instrument.background_components_in_signal:', instrument.background_components_in_signal)
+        print('to_remove:', to_remove)
+        all_components = [c for c in all_components if c not in to_remove]
+
+        print('remaining components:', all_components)
+
+        if self.pileup_expression:
+            self._set_pileup_links()
+        if self.background_expression:
+            self._set_background_links()
+
 
         # TODO: see if we can do this better.
         # Configure the factors to be correct.
@@ -1094,7 +1133,7 @@ class XSPECInterface:
         if 'constant' in current_model.componentNames:
 
             # Identify which constant to change, if there are multiple.
-            for component_name in current_model.componentNames:
+            for component_name in all_components:
                 if 'constant' in component_name:
                     component = current_model.__dict__[component_name]
                     if not component.factor.link:
