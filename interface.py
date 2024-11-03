@@ -1224,23 +1224,26 @@ class XSPECInterface:
 
     def set_gain(
         self,
-        slope: float | tuple,
-        offset: float | tuple,
+        slopes: dict[str, float | tuple],
+        offsets: dict[str, float | tuple],
         fit_slope: bool,
         fit_offset: bool,
-        link_gains: bool = True
+        link_gains: bool = False
     ):
         """
-        Assumes that all spectra share the same gain parameters.
+        slopes and offsets are dictionaries containing the
+        instruments and their associated values.
         If a parameter is not fixed, it will be fitted.
         """
 
         # TODO: Set gain errors.
-        for group_num in self.signal_groups:
+        for instrument in self.instruments:
+            group_num = self.instruments[instrument].signal_data_group
             response = xspec.AllData(group_num).response
-            response.gain.slope = slope
-            response.gain.offset = offset
-
+            if instrument in slopes:
+                response.gain.slope = slopes[instrument]
+            if instrument in offsets:
+                response.gain.offset = offsets[instrument]
             if not fit_slope:
                 response.gain.slope.frozen = True
             if not fit_offset:
