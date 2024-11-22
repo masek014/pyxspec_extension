@@ -1191,6 +1191,8 @@ class XSPECInterface:
     ) -> dict[str, tuple]:
         """
         # TODO: See if we can clean this up?
+        TODO: also, need to configure limits per component,
+        instead of applying the same limits to all components...
         """
         
         self.config_file = config_file
@@ -1202,6 +1204,8 @@ class XSPECInterface:
             group_num = instrument.signal_data_group
             model = xspec.AllModels(group_num, self.current_model)
             for component_name in model.componentNames:
+                if 'expmodgauss' in component_name:
+                    continue
                 component = model.__dict__[component_name]
                 for parameter_name in conf_dict:
                     if parameter_name in component.__dict__:
