@@ -1265,7 +1265,7 @@ class XSPECInterface:
 
     def fit(
         self,
-        num_iterations: int = 1000,
+        num_iterations: int = 50000,
         critical_delta: float = 0.01,
         fit_statistic: str = 'cstat',
         fit_error: bool = True
@@ -1307,7 +1307,7 @@ class XSPECInterface:
                                 error_str += f'{model.name}:{corr_index} '
 
             print('error_str:', error_str)
-            error_str = f'stop 500,0.5, {error_str}'
+            error_str = f'stop 5000,1, {error_str}'
             xspec.Fit.error(error_str)
 
         self._gather_results()
