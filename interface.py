@@ -1130,6 +1130,7 @@ class XSPECInterface:
         # in the class because it's very specific to the behavior I want.
         first_group = self.signal_groups[0]
         current_model = xspec.AllModels(first_group, self.current_model)
+        factor_limits = '1 0.01 0.01 0.01 0.01 100 100'
         if 'constant' in current_model.componentNames:
 
             # Identify which constant to change, if there are multiple.
@@ -1153,6 +1154,7 @@ class XSPECInterface:
                     current_model = xspec.AllModels(group_num, self.current_model).__dict__[constant_to_change].factor = 1.0
                     current_model = xspec.AllModels(group_num, self.current_model).__dict__[constant_to_change].factor.link = ''
                     current_model = xspec.AllModels(group_num, self.current_model).__dict__[constant_to_change].factor.frozen = False
+                    current_model = xspec.AllModels(group_num, self.current_model).__dict__[constant_to_change].factor.values = factor_limits
         
         if len(self.background_groups) != 0:
             background_group = self.background_groups[0]
@@ -1305,7 +1307,7 @@ class XSPECInterface:
                                 error_str += f'{model.name}:{corr_index} '
 
             print('error_str:', error_str)
-            error_str = f'stop 500,, {error_str}'
+            error_str = f'stop 500,0.5, {error_str}'
             xspec.Fit.error(error_str)
 
         self._gather_results()

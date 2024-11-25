@@ -27,9 +27,9 @@ def expmodgauss(engs, params, flux):
 def _add_exponentially_modified_gaussian():
 
     expmodgaussian_info = (
-        'lam ct/keV/s 3. 0.1 0.1 3 3 0.01',
+        'lam ct/keV/s 2. 0.1 0.1 5 5 0.01',
         'mu keV 3. 2.5 2.5 10 10 0.01',
-        'sigma keV 1. 0.01 0.01 4 4 0.01',
+        'sigma keV 1. 0.01 0.01 5 5 0.01',
     )
     xspec.AllModels.addPyMod(expmodgauss, expmodgaussian_info, 'add')
 
