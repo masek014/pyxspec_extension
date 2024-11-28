@@ -482,16 +482,18 @@ class Archive():
         last = next(reversed(self.instruments[instrument]))
         return self.instruments[instrument][last]
 
-    def add_model(self, instrument: str, model: ArchivedModel):
+    def add_model(self, instrument: str, model: ArchivedModel, model_name: str | None = None):
 
         if instrument not in self.instruments:
             self.instruments[instrument] = OrderedDict()
 
-        if model.name not in self.instruments[instrument]:
-            self.instruments[instrument][model.name] = model
-            setattr(self.instruments[instrument], model.name, model) # This is the main reason I want this class
+        if model_name is None:
+            model_name = model.name
+        if model_name not in self.instruments[instrument]:
+            self.instruments[instrument][model_name] = model
+            setattr(self.instruments[instrument], model_name, model) # This is the main reason I want this class
         else:
-            print(f'WARNING: model \'{model.name}\' already in Archive for instrument {instrument}. Not doing anything.')
+            print(f'WARNING: model \'{model_name}\' already in Archive for instrument {instrument}. Not doing anything.')
     
     def save(self, pickle_path: str):
         """
@@ -836,7 +838,9 @@ class XSPECInterface:
                     instrument.pileup_file,
                     self.out_dir
                 )
-                self.archive.add_model(instrument.name, archived_pileup_model)
+                # I'm not a fan of combining the pileup model and current model here.
+                # TODO: try to incorporate this elsewhere.
+                self.archive.add_model(instrument.name, archived_pileup_model, model_name=f'{archived_pileup_model.name}_{self.current_model}')
                 newly_archived[instrument.name]['pileup'] = archived_pileup_model
 
             archived_signal_model = ArchivedModel(
@@ -1130,7 +1134,7 @@ class XSPECInterface:
         # in the class because it's very specific to the behavior I want.
         first_group = self.signal_groups[0]
         current_model = xspec.AllModels(first_group, self.current_model)
-        factor_limits = '1 0.01 0.01 0.01 0.01 100 100'
+        factor_limits = '1 0.01 0.001 0.001 1000 1000'
         if 'constant' in current_model.componentNames:
 
             # Identify which constant to change, if there are multiple.
