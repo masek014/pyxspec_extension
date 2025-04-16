@@ -8,25 +8,26 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "astropy",
-    "imageio",
     "matplotlib",
     "numpy",
-    "nustar_pysolar",
     "parse",
-    "photutils",
-    "regions",
-    "ruptures",
-    "scipy",
-    "scikit-image",
-    "sunpy"
+    "scipy"
 ]
 
 [build-system]
 requires = ["setuptools >= 61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools]
+packages = [
+    "pyxspec_extension",
+]
+
+[tool.setuptools.package-data]
+"pyxspec_extension" = [
+    "styles/*",
+    "config/*"
+]
+
 [tool.setuptools.dynamic]
 version = {attr = "pyxspec_extension.__version__"}
-
-[tool.setuptools.packages.find]
-include = ["pyxspec_extension*"]
