@@ -5,7 +5,7 @@ license = {file = "LICENSE.md"}
 description = "Extension to the PyXSPEC package"
 authors = [{name = "Reed B. Masek"}]
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.13"
 dependencies = [
     "astropy",
     "matplotlib",
