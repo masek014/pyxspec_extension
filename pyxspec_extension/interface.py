@@ -1020,7 +1020,7 @@ class XSPECInterface:
         xspec.Xset.chatter = 0
         self.logfile = xspec.Xset.openLog(
             f'{self.out_dir}/model_{model_name}.log')
-        self.archive_previous()
+        # self.archive_previous()
 
         self.current_model = model_name
 
