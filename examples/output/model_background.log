@@ -1,0 +1,458 @@
+
+Previous model: isothermal_with_pileup for source #: 1 has been rendered inactive.
+
+========================================================================
+Model background:expmodgauss<1> + constant<2>*vapec<3> Source No.: 1   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 1
+   1    1   expmodgausslam        ct/keV/s 1.50000      +/-  0.0          
+   2    1   expmodgaussmu         keV      3.00000      +/-  0.0          
+   3    1   expmodgausssigma      keV      1.00000      +/-  0.0          
+   4    1   expmodgaussnorm                1.00000      +/-  0.0          
+   5    2   constant   factor              1.00000      +/-  0.0          
+   6    3   vapec      kT         keV      6.50000      +/-  0.0          
+   7    3   vapec      He                  1.00000      frozen
+   8    3   vapec      C                   1.00000      frozen
+   9    3   vapec      N                   1.00000      frozen
+  10    3   vapec      O                   1.00000      frozen
+  11    3   vapec      Ne                  1.00000      frozen
+  12    3   vapec      Mg                  1.00000      frozen
+  13    3   vapec      Al                  1.00000      frozen
+  14    3   vapec      Si                  1.00000      frozen
+  15    3   vapec      S                   1.00000      frozen
+  16    3   vapec      Ar                  1.00000      frozen
+  17    3   vapec      Ca                  1.00000      frozen
+  18    3   vapec      Fe                  1.00000      frozen
+  19    3   vapec      Ni                  1.00000      frozen
+  20    3   vapec      Redshift            0.0          frozen
+  21    3   vapec      norm                1.00000      +/-  0.0          
+                           Data group: 3
+  22    1   expmodgausslam        ct/keV/s 1.50000      = background:p1
+  23    1   expmodgaussmu         keV      3.00000      = background:p2
+  24    1   expmodgausssigma      keV      1.00000      = background:p3
+  25    1   expmodgaussnorm                1.00000      = background:p4
+  26    2   constant   factor              1.00000      = background:p5
+  27    3   vapec      kT         keV      6.50000      = background:p6
+  28    3   vapec      He                  1.00000      = background:p7
+  29    3   vapec      C                   1.00000      = background:p8
+  30    3   vapec      N                   1.00000      = background:p9
+  31    3   vapec      O                   1.00000      = background:p10
+  32    3   vapec      Ne                  1.00000      = background:p11
+  33    3   vapec      Mg                  1.00000      = background:p12
+  34    3   vapec      Al                  1.00000      = background:p13
+  35    3   vapec      Si                  1.00000      = background:p14
+  36    3   vapec      S                   1.00000      = background:p15
+  37    3   vapec      Ar                  1.00000      = background:p16
+  38    3   vapec      Ca                  1.00000      = background:p17
+  39    3   vapec      Fe                  1.00000      = background:p18
+  40    3   vapec      Ni                  1.00000      = background:p19
+  41    3   vapec      Redshift            0.0          = background:p20
+  42    3   vapec      norm                1.00000      = background:p21
+________________________________________________________________________
+
+
+Fit statistic  : C-Statistic                 49789.9     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 48994.3     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         113078.8     with 239 d.o.f.
+
+Test statistic : Chi-Squared                148175.9     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 239 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                 49905.1     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 49104.4     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         113304.0     with 239 d.o.f.
+
+Test statistic : Chi-Squared                146879.8     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 239 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                 49905.1     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 49104.4     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         113304.0     with 239 d.o.f.
+
+Test statistic : Chi-Squared                146879.8     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 239 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                 49905.1     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 49104.4     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         113304.0     with 240 d.o.f.
+
+Test statistic : Chi-Squared                146879.8     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 240 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                 49905.1     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 49104.4     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         113304.0     with 241 d.o.f.
+
+Test statistic : Chi-Squared                146879.8     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 241 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                 49905.1     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 49104.4     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         113304.0     with 242 d.o.f.
+
+Test statistic : Chi-Squared                146879.8     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 242 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                 49905.1     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 49104.4     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         113304.0     with 243 d.o.f.
+
+Test statistic : Chi-Squared                146879.8     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 243 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                 49905.1     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 49104.4     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         113304.0     with 243 d.o.f.
+
+Test statistic : Chi-Squared                146879.8     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 243 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                 49905.1     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 49104.4     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         113304.0     with 243 d.o.f.
+
+Test statistic : Chi-Squared                146879.8     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 243 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                 49905.1     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 49104.4     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         113304.0     with 243 d.o.f.
+
+Test statistic : Chi-Squared                146879.8     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 243 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                 49905.1     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 49104.4     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         113304.0     with 243 d.o.f.
+
+Test statistic : Chi-Squared                146879.8     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 243 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                 49905.1     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 49104.4     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         113304.0     with 243 d.o.f.
+
+Test statistic : Chi-Squared                146879.8     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 243 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                 49905.1     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 49104.4     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         113304.0     with 244 d.o.f.
+
+Test statistic : Chi-Squared                146879.8     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 244 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                 49905.1     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 49104.4     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         113304.0     with 243 d.o.f.
+
+Test statistic : Chi-Squared                146879.8     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 243 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                 49905.1     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 49104.4     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         113304.0     with 243 d.o.f.
+
+Test statistic : Chi-Squared                146879.8     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 243 degrees of freedom
+ Current data and model not fit yet.
+  parameter background:26 is not frozen.
+
+Fit statistic  : C-Statistic                 49905.1     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 49104.4     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         113304.0     with 243 d.o.f.
+
+Test statistic : Chi-Squared                146879.8     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 243 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                 45775.5     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 49104.4     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         109174.4     with 243 d.o.f.
+
+Test statistic : Chi-Squared                152384.3     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 243 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                 45775.5     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 49104.4     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         109174.4     with 243 d.o.f.
+
+Test statistic : Chi-Squared                152384.3     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 243 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                 45775.5     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 45240.0     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         105310.0     with 243 d.o.f.
+
+Test statistic : Chi-Squared                160428.8     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 243 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                 45775.5     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                  6012.3     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                 45240.0     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                  8282.3     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         105310.0     with 243 d.o.f.
+
+Test statistic : Chi-Squared                160428.8     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 243 degrees of freedom
+ Current data and model not fit yet.
+Default fit statistic is set to: C-Statistic
+   This will apply to all current and newly loaded spectra.
+
+Fit statistic  : C-Statistic                45775.49     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                 6012.28     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                45239.96     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                 8282.29     using 44 bins, spectrum 4, group 4.
+Total fit statistic                         105310.0     with 243 d.o.f.
+
+Test statistic : Chi-Squared                160428.8     using 254 bins.
+ Null hypothesis probability of 0.0e+00 with 243 degrees of freedom
+ Current data and model not fit yet.
+                                   Parameters
+C-Statistic  |beta|/N    Lvl pileupFPMA:1: pileupFPMA:2: pileupFPMA:3: pileupFPMA:4: pileupFPMB:1: pileupFPMB:2: pileupFPMB:3: pileupFPMB:4: background:6: background:21 background:26
+82864        2053.35       0       4.10536       2.68303      0.673874      0.809173       4.42259       2.62077      0.683490      0.658380      0.204061     0.0209805      0.354158
+77417.2      2253.71       5       4.10536       2.68303      0.673874      0.809173       4.42259       2.62077      0.683489      0.658380       1.39715       1.35350       42.9509
+77416.5      1991.33       4       4.10535       2.68303      0.673873      0.809179       4.42257       2.62077      0.683488      0.658386       1.39717       1.35354       42.9523
+77409.6      1991.3        3       4.10529       2.68305      0.673860      0.809234       4.42246       2.62080      0.683468      0.658438       1.39728       1.35401       42.9670
+77340.8      1990.96       2       4.10461       2.68323      0.673732      0.809786       4.42129       2.62107      0.683275      0.658963       1.39847       1.35863       43.1128
+76673.2      1987.62       1       4.09808       2.68497      0.672454      0.815242       4.41054       2.62367      0.681357      0.664071       1.40974       1.40341       44.5245
+71572.3      1955.47       0       4.04843       2.69873      0.660369      0.864487       4.36233       2.64016      0.663888      0.704589       1.48270       1.74566       55.2616
+56836.8      1720.85       0       3.81204       2.71643      0.597142       1.12913       4.28619       2.62994      0.588159      0.853224       1.33408       2.89189       89.3756
+46569.9      1175.27      -1       2.50570       2.57159      0.552430       1.78357       2.82690       2.52574      0.538652      0.852886      0.676543       7.42789       195.665
+28380.9      2279.52      -1       1.84784       2.52385      0.337912       2.39449       2.57316       2.51107      0.508293      0.358238      0.750516       14.3738       373.130
+22248.7      1375.73      -1       2.13142       2.50652     0.0288712       2.47483       1.91328       2.50055      0.753228     0.0205205      0.608139       20.9779       539.365
+21904.2      3534.99      -2       2.24092       2.50225     0.0183202       2.75121       1.81767       2.94831      0.653604     0.0330925      0.473785       34.2608       842.174
+18667.9      6863.52      -3       2.25089       2.50062     0.0113277       2.71970       1.57215       3.03604      0.569124     0.0521695      0.440975       54.8770       930.895
+16443        6091.92      -3       2.25216       2.50021     0.0104248       2.57251       1.48182       3.10748      0.526790     0.0730447      0.422264       83.2489       999.260
+15795.1      3032.24      -4       2.24972       2.50004     0.0101862       2.75206       1.47565       3.13982      0.519781     0.0868466      0.409352       322.108       411.279
+15665.6      1721.87      -2       2.25083       2.50001     0.0100544       2.88723       1.48193       3.14568      0.526361     0.0903270      0.409564       334.868       355.584
+15616        427.37       -1       2.26955       2.50000     0.0100120       2.91875       1.48445       3.14322      0.529140     0.0904128      0.409956       339.318       353.642
+15612.3      328.531      -1       2.27276       2.50000     0.0100047       2.93988       1.48561       3.14215      0.530906     0.0904279      0.410024       342.434       350.154
+15611.7      335.678      -1       2.27378       2.50000     0.0100008       2.94878       1.48638       3.14167      0.531924     0.0904484      0.410076       345.603       346.669
+15611.3      339.01       -1       2.27415       2.50000     0.0100003       2.95230       1.48689       3.14138      0.532556     0.0904583      0.410120       348.855       343.209
+15610.7      340.383      -1       2.27428       2.50000     0.0100001       2.95360       1.48721       3.14117      0.532957     0.0904613      0.410157       352.187       339.769
+15610.1      340.905      -1       2.27432       2.50000     0.0100000       2.95403       1.48739       3.14100      0.533212     0.0904604      0.410189       355.600       336.343
+15609.4      341.093      -1       2.27432       2.50000     0.0100000       2.95411       1.48749       3.14087      0.533376     0.0904572      0.410218       359.091       332.929
+15608.7      341.15       -1       2.27431       2.50000     0.0100000       2.95405       1.48754       3.14076      0.533480     0.0904527      0.410244       362.662       329.522
+15608        341.155      -1       2.27429       2.50000     0.0100000       2.95393       1.48756       3.14066      0.533548     0.0904475      0.410268       366.312       326.122
+15607.3      341.14       -1       2.27426       2.50000     0.0100000       2.95380       1.48755       3.14057      0.533591     0.0904419      0.410291       370.043       322.727
+15606.6      341.117      -1       2.27424       2.50000     0.0100000       2.95365       1.48754       3.14050      0.533620     0.0904360      0.410312       373.856       319.336
+15605.9      341.09       -1       2.27421       2.50000     0.0100000       2.95350       1.48751       3.14042      0.533639     0.0904301      0.410332       377.752       315.947
+15605.1      341.061      -1       2.27419       2.50000     0.0100000       2.95334       1.48748       3.14035      0.533652     0.0904241      0.410352       381.734       312.561
+15604.3      341.032      -1       2.27416       2.50000     0.0100000       2.95317       1.48745       3.14028      0.533661     0.0904180      0.410371       385.803       309.177
+15603.6      341.001      -1       2.27413       2.50000     0.0100000       2.95301       1.48741       3.14021      0.533668     0.0904120      0.410390       389.962       305.793
+15602.7      340.971      -1       2.27411       2.50000     0.0100000       2.95284       1.48738       3.14014      0.533674     0.0904058      0.410410       394.213       302.411
+15601.9      340.939      -1       2.27408       2.50000     0.0100000       2.95266       1.48734       3.14008      0.533680     0.0903996      0.410429       398.560       299.030
+15601.1      340.907      -1       2.27405       2.50000     0.0100000       2.95249       1.48731       3.14001      0.533685     0.0903934      0.410448       403.005       295.649
+15600.2      340.874      -1       2.27402       2.50000     0.0100000       2.95231       1.48727       3.13994      0.533689     0.0903870      0.410467       407.551       292.268
+15599.3      340.841      -1       2.27399       2.50000     0.0100000       2.95212       1.48723       3.13988      0.533694     0.0903806      0.410487       412.202       288.888
+15432.3      145.231       0       2.34575       2.50000     0.0100000       2.86765       1.48723       3.13986      0.533697     0.0903785      0.410491       412.730       288.545
+15253.1      92.6633      -1       2.49284       2.50000     0.0100000       3.01239       1.48715       3.13974      0.533753     0.0903531      0.410534       418.266       284.553
+15223.5      27.9089      -2       2.54644       2.50000     0.0100000       3.09417       1.48697       3.13931      0.533826     0.0903258      0.410651       473.637       246.430
+15210.5      419.902      -2       2.56208       2.50000     0.0100000       3.10950       1.48648       3.13800      0.534156     0.0902295      0.411030       547.703       210.931
+15197.3      530.973      -2       2.56632       2.50000     0.0100000       3.10964       1.48587       3.13662      0.534378     0.0901087      0.411430       647.740       175.932
+15183.3      718.096      -2       2.56683       2.50000     0.0100000       3.10444       1.48505       3.13481      0.534676     0.0899517      0.411962       789.233       141.479
+15175        1016.25      -2       2.56579       2.50000     0.0100000       3.09479       1.48392       3.13219      0.535187     0.0897287      0.412747       1002.24       107.738
+15125.3      1510.25      -3       2.54661       2.50000     0.0100000       2.94767       1.48202       3.12791      0.536200     0.0893691      0.414070       4263.55       21.3191
+14463.4      4928.26      -2       2.50429       2.50000     0.0100000       2.64122       1.46311       3.07388      0.562041     0.0852310      0.430690       10086.7       6.49132
+4112.99      6872.67      -2       2.24375       2.50000     0.0100000      0.600383       1.44131       2.94407      0.617769     0.0783741      0.478816       41984.5      0.913136
+1372.84      6258.4       -1       1.30697       2.50000     0.0100000      0.159504       1.49383       2.96069      0.586389     0.0820777      0.482636       55246.6      0.837340
+1034.68      489.326      -1       1.17239       2.50000     0.0100000      0.174962       1.49095       2.98072      0.572259     0.0847718      0.468894       62420.1      0.897628
+840.209      55.2976      -1       1.16360       2.50000     0.0100000      0.184079       1.48118       3.00076      0.566031     0.0852825      0.458277       70022.8      0.913334
+710.533      234.91       -2       1.09531       2.50000     0.0100000      0.188422       1.43146       3.10768      0.515341     0.0862076      0.425789       98212.6      0.901709
+597.284      3046.8       -3       1.10719       2.50000     0.0100000      0.196039       1.47639       3.14439      0.516875     0.0898385      0.406745       130007.      0.894329
+429.707      3301.1       -4       1.09580       2.50000     0.0100000      0.195883       1.48359       3.14763      0.525971     0.0908808      0.408412       136975.      0.892584
+429.171      191.228      -5       1.10169       2.50000     0.0100000      0.196706       1.48845       3.14690      0.530685     0.0909793      0.408562       137244.      0.892757
+429.169      8.93156      -6       1.09879       2.50000     0.0100000      0.196257       1.49015       3.14696      0.532247     0.0910147      0.408515       137324.      0.892681
+413.251      4.74653       1       1.09881       2.50140      0.187285      0.196255       1.49015       3.14696      0.532249     0.0910148      0.408515       137324.      0.892681
+403.056      9.5251        0       1.10203       2.51001      0.252553      0.195928       1.49015       3.14697      0.532266     0.0910156      0.408513       137327.      0.892687
+363.965      19.6338       0       1.15385       2.53945      0.534375      0.191375       1.49017       3.14702      0.532379     0.0910159      0.408491       137415.      0.892573
+325.83       31.2913      -1       1.47475       2.66944      0.795009      0.190278       1.49079       3.14828      0.532312     0.0911277      0.408036       138299.      0.892535
+310.393      15.0391      -2       1.80283       2.85609      0.789653      0.183061       1.49412       3.15612      0.530512     0.0916265      0.405817       142709.      0.892742
+308.828      94.2143      -3       1.75249       2.86543      0.748601      0.179893       1.49733       3.16043      0.530008     0.0919978      0.403529       147009.      0.892267
+308.715      42.9972      -4       1.74797       2.87128      0.741165      0.179156       1.49843       3.16077      0.530369     0.0920914      0.402714       148466.      0.892141
+308.715      3.83421      -5       1.74675       2.87120      0.740531      0.179128       1.49858       3.16073      0.530556     0.0921001      0.402718       148477.      0.892102
+==========================================================================================
+ Variances and Principal Axes
+         pileupFPMA:1pileupFPMA:2pileupFPMA:3pileupFPMA:4pileupFPMB:1pileupFPMB:2pileupFPMB:3pileupFPMB:4background:6background:21background:26  
+ 1.9366E-07| -0.0004   0.0017  -0.0001   0.0141  -0.0002   0.0011  -0.0003   0.0226   0.9988   0.0000   0.0417  
+ 1.0578E-05|  0.0011  -0.0037  -0.0002  -0.0281  -0.0288   0.0686   0.0080   0.9961  -0.0234  -0.0000   0.0278  
+ 2.9809E-05| -0.0542   0.1515   0.0441   0.9782  -0.0022   0.0036   0.0018   0.0310  -0.0098  -0.0000  -0.1193  
+ 1.1973E-04| -0.0182   0.0325   0.0304   0.1138   0.0131  -0.0206  -0.0164  -0.0234  -0.0424   0.0000   0.9907  
+ 5.6626E-04|  0.3539  -0.4642  -0.8006   0.1314   0.0018  -0.0032  -0.0026   0.0008  -0.0023   0.0000   0.0310  
+ 8.0193E-04| -0.0012   0.0016   0.0029  -0.0013   0.4622  -0.6005  -0.6491   0.0607   0.0004   0.0000  -0.0279  
+ 6.8842E-03| -0.0001  -0.0004  -0.0004   0.0005   0.3645   0.7963  -0.4811  -0.0405  -0.0002  -0.0000   0.0027  
+ 1.3468E-02|  0.5396   0.8025  -0.2405  -0.0835   0.0000   0.0002  -0.0002  -0.0000  -0.0000  -0.0000   0.0006  
+ 1.5940E-02| -0.0000  -0.0001   0.0000  -0.0000  -0.8078   0.0129  -0.5890  -0.0196   0.0000   0.0000   0.0007  
+ 3.6687E-02|  0.7618  -0.3413   0.5461   0.0705   0.0000   0.0001  -0.0000   0.0000  -0.0000   0.0000   0.0003  
+ 3.8259E+07| -0.0000  -0.0000   0.0000   0.0000  -0.0000  -0.0000   0.0000  -0.0000   0.0000  -1.0000   0.0000  
+------------------------------------------------------------------------------------------
+
+====================================================================================================================================
+  Covariance Matrix
+        1           2           3           4           5           6           7           8           9          10          11   
+   2.528e-02  -3.774e-03   1.335e-02   1.386e-03   7.187e-06   1.637e-05  -5.950e-06   1.012e-06  -6.388e-06   1.013e+01   1.577e-05
+  -3.774e-03   1.329e-02  -9.311e-03  -1.825e-03   4.928e-05   1.123e-04  -4.080e-05   6.942e-06  -4.381e-05   9.160e+01  -2.479e-05
+   1.335e-02  -9.311e-03   1.212e-02   1.629e-03  -1.973e-05  -4.495e-05   1.634e-05  -2.779e-06   1.754e-05  -3.550e+01   2.862e-06
+   1.386e-03  -1.825e-03   1.629e-03   3.166e-04  -1.139e-06  -2.595e-06   9.432e-07  -1.605e-07   1.013e-06  -4.288e+00   1.362e-05
+   7.187e-06   4.928e-05  -1.973e-05  -1.139e-06   1.150e-02   1.635e-03   6.127e-03   1.741e-04  -1.042e-05   2.070e+01  -1.594e-05
+   1.637e-05   1.123e-04  -4.495e-05  -2.595e-06   1.635e-03   4.715e-03  -2.467e-03  -2.509e-04  -2.375e-05   4.714e+01   1.482e-05
+  -5.950e-06  -4.080e-05   1.634e-05   9.432e-07   6.127e-03  -2.467e-03   7.469e-03   2.851e-04   8.630e-06  -1.713e+01   8.938e-07
+   1.012e-06   6.942e-06  -2.779e-06  -1.605e-07   1.741e-04  -2.509e-04   2.851e-04   3.117e-05  -1.468e-06   2.915e+00  -5.619e-06
+  -6.388e-06  -4.381e-05   1.754e-05   1.013e-06  -1.042e-05  -2.375e-05   8.630e-06  -1.468e-06   9.265e-06  -1.839e+01  -6.422e-07
+   1.013e+01   9.160e+01  -3.550e+01  -4.288e+00   2.070e+01   4.714e+01  -1.713e+01   2.915e+00  -1.839e+01   3.826e+07  -9.169e+00
+   1.577e-05  -2.479e-05   2.862e-06   1.362e-05  -1.594e-05   1.482e-05   8.938e-07  -5.619e-06  -6.422e-07  -9.169e+00   1.214e-04
+------------------------------------------------------------------------------------------------------------------------------------
+
+========================================================================
+Model background:expmodgauss<1> + constant<2>*vapec<3> Source No.: 1   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 1
+   1    1   expmodgausslam        ct/keV/s 1.74675      = pileupFPMA:p1
+   2    1   expmodgaussmu         keV      2.87120      = pileupFPMA:p2
+   3    1   expmodgausssigma      keV      0.740531     = pileupFPMA:p3
+   4    1   expmodgaussnorm                0.223910     = 1.25*pileupFPMA:p4
+   5    2   constant   factor              1.00000      frozen
+   6    3   vapec      kT         keV      0.402718     +/-  3.04389E-03  
+   7    3   vapec      He                  1.00000      frozen
+   8    3   vapec      C                   1.00000      frozen
+   9    3   vapec      N                   1.00000      frozen
+  10    3   vapec      O                   1.00000      frozen
+  11    3   vapec      Ne                  1.00000      frozen
+  12    3   vapec      Mg                  1.00000      frozen
+  13    3   vapec      Al                  1.00000      frozen
+  14    3   vapec      Si                  1.00000      frozen
+  15    3   vapec      S                   1.00000      frozen
+  16    3   vapec      Ar                  1.00000      frozen
+  17    3   vapec      Ca                  1.00000      frozen
+  18    3   vapec      Fe                  1.00000      frozen
+  19    3   vapec      Ni                  1.00000      frozen
+  20    3   vapec      Redshift            0.0          frozen
+  21    3   vapec      norm                1.48477E+05  +/-  6185.37      
+                           Data group: 3
+  22    1   expmodgausslam        ct/keV/s 1.49858      = pileupFPMB:p1
+  23    1   expmodgaussmu         keV      3.16073      = pileupFPMB:p2
+  24    1   expmodgausssigma      keV      0.530556     = pileupFPMB:p3
+  25    1   expmodgaussnorm                0.115125     = 1.25*pileupFPMB:p4
+  26    2   constant   factor              0.892102     +/-  1.10172E-02  
+  27    3   vapec      kT         keV      0.402718     = background:p6
+  28    3   vapec      He                  1.00000      = background:p7
+  29    3   vapec      C                   1.00000      = background:p8
+  30    3   vapec      N                   1.00000      = background:p9
+  31    3   vapec      O                   1.00000      = background:p10
+  32    3   vapec      Ne                  1.00000      = background:p11
+  33    3   vapec      Mg                  1.00000      = background:p12
+  34    3   vapec      Al                  1.00000      = background:p13
+  35    3   vapec      Si                  1.00000      = background:p14
+  36    3   vapec      S                   1.00000      = background:p15
+  37    3   vapec      Ar                  1.00000      = background:p16
+  38    3   vapec      Ca                  1.00000      = background:p17
+  39    3   vapec      Fe                  1.00000      = background:p18
+  40    3   vapec      Ni                  1.00000      = background:p19
+  41    3   vapec      Redshift            0.0          = background:p20
+  42    3   vapec      norm                1.48477E+05  = background:p21
+________________________________________________________________________
+
+
+========================================================================
+Model pileupFPMA:expmodgauss<1> Source No.: 2   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 2
+   1    1   expmodgausslam        ct/keV/s 1.74675      +/-  0.159013     
+   2    1   expmodgaussmu         keV      2.87120      +/-  0.115274     
+   3    1   expmodgausssigma      keV      0.740531     +/-  0.110081     
+   4    1   expmodgaussnorm                0.179128     +/-  1.77924E-02  
+________________________________________________________________________
+
+
+========================================================================
+Model pileupFPMB:expmodgauss<1> Source No.: 3   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 4
+   1    1   expmodgausslam        ct/keV/s 1.49858      +/-  0.107228     
+   2    1   expmodgaussmu         keV      3.16073      +/-  6.86662E-02  
+   3    1   expmodgausssigma      keV      0.530556     +/-  8.64244E-02  
+   4    1   expmodgaussnorm                9.21001E-02  +/-  5.58295E-03  
+________________________________________________________________________
+
+
+Fit statistic  : C-Statistic                  106.06     using 78 bins, spectrum 1, group 1.
+                 C-Statistic                   43.89     using 53 bins, spectrum 2, group 2.
+                 C-Statistic                  110.54     using 79 bins, spectrum 3, group 3.
+                 C-Statistic                   48.24     using 44 bins, spectrum 4, group 4.
+Total fit statistic                           308.71     with 243 d.o.f.
+
+Test statistic : Chi-Squared                  313.28     using 254 bins.
+ Null hypothesis probability of 1.57e-03 with 243 degrees of freedom
+ Parameter   Confidence Range (2.706)
+     6     0.398056     0.407626    (-0.00466164,0.00490828)
+ Due to zero model norms, the following fit parameters are temporarily frozen:1310721 1310722 1310723 1376257 1376258 1376259 
+    21       138436       158702    (-10041.6,10224.2)
+     1      1.53869      2.22128    (-0.207889,0.474708)
+     2       2.6117      3.01566    (-0.259568,0.144395)
+     3     0.567159     0.982754    (-0.173239,0.242355)
+     4     0.157561     0.223822    (-0.0215539,0.0447074)
+    26     0.874172     0.910598    (-0.0179314,0.0184945)
+     1      1.33321      1.79792    (-0.165442,0.299266)
+     2      3.01307       3.2577    (-0.14767,0.0969622)
+     3     0.387941     0.738219    (-0.142676,0.207603)
+     4    0.0841492     0.105148    (-0.00795209,0.0130464)

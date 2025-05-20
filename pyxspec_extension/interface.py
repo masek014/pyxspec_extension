@@ -1264,8 +1264,13 @@ class XSPECInterface:
             response = xspec.AllData(group_num).response
             if instrument in slopes:
                 response.gain.slope = slopes[instrument]
+            else:
+                print(
+                    f'Instrument \"{instrument}\" not provided slopes. Skipping')
             if instrument in offsets:
                 response.gain.offset = offsets[instrument]
+                print(
+                    f'Instrument \"{instrument}\" not provided offsets. Skipping')
             if not fit_slope:
                 response.gain.slope.frozen = True
             if not fit_offset:
