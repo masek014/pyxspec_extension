@@ -42,6 +42,15 @@ MODEL_COMPONENT_MAPPING = dict(
     constant=dict(
         factor=('factor', u.Unit())
     ),
+    gaussian=dict(
+        LineE=('$E_L$', u.keV),
+        Sigma=('sigma', u.keV),
+        norm=('gauss_norm', u.ph/(u.cm**2)/u.s)
+    ),
+    nlapec=dict(
+        kT=('t', u.keV),
+        norm=('em', u.Unit())
+    ),
     vapec=dict(
         kT=('t', u.keV),
         norm=('em', u.Unit())
@@ -63,6 +72,10 @@ MODEL_COMPONENT_MAPPING = dict(
 # TODO: Combine with the dictionary above?
 # TODO: This norm parameter conversion is specfically for Earth-based observers... Fix this.
 PARAMETER_CONVERSIONS = dict(
+    nlapec=dict(
+        kT=11.6045 * u.MK / u.keV,
+        norm=u.cm**-3 / 3.5557e-42
+    ),
     vapec=dict(
         kT=11.6045 * u.MK / u.keV,
         norm=u.cm**-3 / 3.5557e-42
@@ -71,6 +84,15 @@ PARAMETER_CONVERSIONS = dict(
 COMPONENT_PARAMETER_MAPPING = dict(
     constant=dict(
         factor=('factor', u.Unit())
+    ),
+    gaussian=dict(
+        LineE=('line_energy', u.keV),
+        Sigma=('line_width', u.keV),
+        norm=('gaussian_norm', u.ph/(u.cm**2)/u.s)
+    ),
+    nlapec=dict(
+        kT=('temperature', u.keV),
+        norm=('emission_measure', u.Unit())
     ),
     vapec=dict(
         kT=('temperature', u.keV),
