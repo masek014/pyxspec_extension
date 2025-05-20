@@ -1,0 +1,33 @@
+[project]
+dynamic = ["version"]
+name = "pyxspec_extension"
+license = {file = "LICENSE.md"}
+description = "Extension to the PyXSPEC package"
+authors = [{name = "Reed B. Masek"}]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "astropy",
+    "matplotlib",
+    "numpy",
+    "parse",
+    "scipy"
+]
+
+[build-system]
+requires = ["setuptools >= 61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = [
+    "pyxspec_extension",
+]
+
+[tool.setuptools.package-data]
+"pyxspec_extension" = [
+    "styles/*",
+    "config/*"
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "pyxspec_extension.__version__"}

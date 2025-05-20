@@ -1,248 +1,1804 @@
 
-Previous model: isothermal for source #: 1 has been rendered inactive.
-
 ========================================================================
-Model pileup:expmodgauss<1> Source No.: 1   Active/On
+Model pileup:expmodgauss<1> + constant<2>*vapec<3> Source No.: 1   Active/On
 Model Model Component  Parameter  Unit     Value
  par  comp
                            Data group: 1
-   1    1   expmodgausslam        ct/keV/s 3.00000      +/-  0.0          
+   1    1   expmodgausslam        ct/keV/s 1.50000      +/-  0.0          
    2    1   expmodgaussmu         keV      3.00000      +/-  0.0          
    3    1   expmodgausssigma      keV      1.00000      +/-  0.0          
    4    1   expmodgaussnorm                1.00000      +/-  0.0          
-                           Data group: 2
-   5    1   expmodgausslam        ct/keV/s 3.00000      = pileup:p1
-   6    1   expmodgaussmu         keV      3.00000      = pileup:p2
-   7    1   expmodgausssigma      keV      1.00000      = pileup:p3
-   8    1   expmodgaussnorm                1.00000      = pileup:p4
+   5    2   constant   factor              1.00000      +/-  0.0          
+   6    3   vapec      kT         keV      6.50000      +/-  0.0          
+   7    3   vapec      He                  1.00000      frozen
+   8    3   vapec      C                   1.00000      frozen
+   9    3   vapec      N                   1.00000      frozen
+  10    3   vapec      O                   1.00000      frozen
+  11    3   vapec      Ne                  1.00000      frozen
+  12    3   vapec      Mg                  1.00000      frozen
+  13    3   vapec      Al                  1.00000      frozen
+  14    3   vapec      Si                  1.00000      frozen
+  15    3   vapec      S                   1.00000      frozen
+  16    3   vapec      Ar                  1.00000      frozen
+  17    3   vapec      Ca                  1.00000      frozen
+  18    3   vapec      Fe                  1.00000      frozen
+  19    3   vapec      Ni                  1.00000      frozen
+  20    3   vapec      Redshift            0.0          frozen
+  21    3   vapec      norm                1.00000      +/-  0.0          
+                           Data group: 3
+  22    1   expmodgausslam        ct/keV/s 1.50000      = pileup:p1
+  23    1   expmodgaussmu         keV      3.00000      = pileup:p2
+  24    1   expmodgausssigma      keV      1.00000      = pileup:p3
+  25    1   expmodgaussnorm                1.00000      = pileup:p4
+  26    2   constant   factor              1.00000      = pileup:p5
+  27    3   vapec      kT         keV      6.50000      = pileup:p6
+  28    3   vapec      He                  1.00000      = pileup:p7
+  29    3   vapec      C                   1.00000      = pileup:p8
+  30    3   vapec      N                   1.00000      = pileup:p9
+  31    3   vapec      O                   1.00000      = pileup:p10
+  32    3   vapec      Ne                  1.00000      = pileup:p11
+  33    3   vapec      Mg                  1.00000      = pileup:p12
+  34    3   vapec      Al                  1.00000      = pileup:p13
+  35    3   vapec      Si                  1.00000      = pileup:p14
+  36    3   vapec      S                   1.00000      = pileup:p15
+  37    3   vapec      Ar                  1.00000      = pileup:p16
+  38    3   vapec      Ca                  1.00000      = pileup:p17
+  39    3   vapec      Fe                  1.00000      = pileup:p18
+  40    3   vapec      Ni                  1.00000      = pileup:p19
+  41    3   vapec      Redshift            0.0          = pileup:p20
+  42    3   vapec      norm                1.00000      = pileup:p21
+                           Data group: 5
+  43    1   expmodgausslam        ct/keV/s 1.50000      = pileup:p1
+  44    1   expmodgaussmu         keV      3.00000      = pileup:p2
+  45    1   expmodgausssigma      keV      1.00000      = pileup:p3
+  46    1   expmodgaussnorm                1.00000      = pileup:p4
+  47    2   constant   factor              1.00000      = pileup:p5
+  48    3   vapec      kT         keV      6.50000      = pileup:p6
+  49    3   vapec      He                  1.00000      = pileup:p7
+  50    3   vapec      C                   1.00000      = pileup:p8
+  51    3   vapec      N                   1.00000      = pileup:p9
+  52    3   vapec      O                   1.00000      = pileup:p10
+  53    3   vapec      Ne                  1.00000      = pileup:p11
+  54    3   vapec      Mg                  1.00000      = pileup:p12
+  55    3   vapec      Al                  1.00000      = pileup:p13
+  56    3   vapec      Si                  1.00000      = pileup:p14
+  57    3   vapec      S                   1.00000      = pileup:p15
+  58    3   vapec      Ar                  1.00000      = pileup:p16
+  59    3   vapec      Ca                  1.00000      = pileup:p17
+  60    3   vapec      Fe                  1.00000      = pileup:p18
+  61    3   vapec      Ni                  1.00000      = pileup:p19
+  62    3   vapec      Redshift            0.0          = pileup:p20
+  63    3   vapec      norm                1.00000      = pileup:p21
+                           Data group: 7
+  64    1   expmodgausslam        ct/keV/s 1.50000      = pileup:p1
+  65    1   expmodgaussmu         keV      3.00000      = pileup:p2
+  66    1   expmodgausssigma      keV      1.00000      = pileup:p3
+  67    1   expmodgaussnorm                1.00000      = pileup:p4
+  68    2   constant   factor              1.00000      = pileup:p5
+  69    3   vapec      kT         keV      6.50000      = pileup:p6
+  70    3   vapec      He                  1.00000      = pileup:p7
+  71    3   vapec      C                   1.00000      = pileup:p8
+  72    3   vapec      N                   1.00000      = pileup:p9
+  73    3   vapec      O                   1.00000      = pileup:p10
+  74    3   vapec      Ne                  1.00000      = pileup:p11
+  75    3   vapec      Mg                  1.00000      = pileup:p12
+  76    3   vapec      Al                  1.00000      = pileup:p13
+  77    3   vapec      Si                  1.00000      = pileup:p14
+  78    3   vapec      S                   1.00000      = pileup:p15
+  79    3   vapec      Ar                  1.00000      = pileup:p16
+  80    3   vapec      Ca                  1.00000      = pileup:p17
+  81    3   vapec      Fe                  1.00000      = pileup:p18
+  82    3   vapec      Ni                  1.00000      = pileup:p19
+  83    3   vapec      Redshift            0.0          = pileup:p20
+  84    3   vapec      norm                1.00000      = pileup:p21
+                           Data group: 9
+  85    1   expmodgausslam        ct/keV/s 1.50000      = pileup:p1
+  86    1   expmodgaussmu         keV      3.00000      = pileup:p2
+  87    1   expmodgausssigma      keV      1.00000      = pileup:p3
+  88    1   expmodgaussnorm                1.00000      = pileup:p4
+  89    2   constant   factor              1.00000      = pileup:p5
+  90    3   vapec      kT         keV      6.50000      = pileup:p6
+  91    3   vapec      He                  1.00000      = pileup:p7
+  92    3   vapec      C                   1.00000      = pileup:p8
+  93    3   vapec      N                   1.00000      = pileup:p9
+  94    3   vapec      O                   1.00000      = pileup:p10
+  95    3   vapec      Ne                  1.00000      = pileup:p11
+  96    3   vapec      Mg                  1.00000      = pileup:p12
+  97    3   vapec      Al                  1.00000      = pileup:p13
+  98    3   vapec      Si                  1.00000      = pileup:p14
+  99    3   vapec      S                   1.00000      = pileup:p15
+ 100    3   vapec      Ar                  1.00000      = pileup:p16
+ 101    3   vapec      Ca                  1.00000      = pileup:p17
+ 102    3   vapec      Fe                  1.00000      = pileup:p18
+ 103    3   vapec      Ni                  1.00000      = pileup:p19
+ 104    3   vapec      Redshift            0.0          = pileup:p20
+ 105    3   vapec      norm                1.00000      = pileup:p21
+                           Data group: 11
+ 106    1   expmodgausslam        ct/keV/s 1.50000      = pileup:p1
+ 107    1   expmodgaussmu         keV      3.00000      = pileup:p2
+ 108    1   expmodgausssigma      keV      1.00000      = pileup:p3
+ 109    1   expmodgaussnorm                1.00000      = pileup:p4
+ 110    2   constant   factor              1.00000      = pileup:p5
+ 111    3   vapec      kT         keV      6.50000      = pileup:p6
+ 112    3   vapec      He                  1.00000      = pileup:p7
+ 113    3   vapec      C                   1.00000      = pileup:p8
+ 114    3   vapec      N                   1.00000      = pileup:p9
+ 115    3   vapec      O                   1.00000      = pileup:p10
+ 116    3   vapec      Ne                  1.00000      = pileup:p11
+ 117    3   vapec      Mg                  1.00000      = pileup:p12
+ 118    3   vapec      Al                  1.00000      = pileup:p13
+ 119    3   vapec      Si                  1.00000      = pileup:p14
+ 120    3   vapec      S                   1.00000      = pileup:p15
+ 121    3   vapec      Ar                  1.00000      = pileup:p16
+ 122    3   vapec      Ca                  1.00000      = pileup:p17
+ 123    3   vapec      Fe                  1.00000      = pileup:p18
+ 124    3   vapec      Ni                  1.00000      = pileup:p19
+ 125    3   vapec      Redshift            0.0          = pileup:p20
+ 126    3   vapec      norm                1.00000      = pileup:p21
 ________________________________________________________________________
 
 
-Fit statistic  : C-Statistic                  459.84     using 4096 bins, spectrum 1, group 1.
-                 C-Statistic                  660.37     using 4096 bins, spectrum 2, group 2.
-Total fit statistic                          1120.21     with 8188 d.o.f.
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8825 d.o.f.
 
-Test statistic : Chi-Squared                 1019.68     using 8192 bins.
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
 
 ***Warning: Chi-square may not be valid due to bins with zero variance
-            in spectrum number(s): 1 2 
+            in spectrum number(s): 10 12 
 
- Null hypothesis probability of 1.00e+00 with 8188 degrees of freedom
+ Null hypothesis probability of 0.00e+00 with 8825 degrees of freedom
  Current data and model not fit yet.
 
-Fit statistic  : C-Statistic                  458.59     using 4096 bins, spectrum 1, group 1.
-                 C-Statistic                  658.82     using 4096 bins, spectrum 2, group 2.
-Total fit statistic                          1117.41     with 8188 d.o.f.
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8825 d.o.f.
 
-Test statistic : Chi-Squared                 1008.68     using 8192 bins.
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
 
 ***Warning: Chi-square may not be valid due to bins with zero variance
-            in spectrum number(s): 1 2 
+            in spectrum number(s): 10 12 
 
- Null hypothesis probability of 1.00e+00 with 8188 degrees of freedom
+ Null hypothesis probability of 0.00e+00 with 8825 degrees of freedom
  Current data and model not fit yet.
 
-Fit statistic  : C-Statistic                  458.59     using 4096 bins, spectrum 1, group 1.
-                 C-Statistic                  658.82     using 4096 bins, spectrum 2, group 2.
-Total fit statistic                          1117.41     with 8188 d.o.f.
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8825 d.o.f.
 
-Test statistic : Chi-Squared                 1008.68     using 8192 bins.
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
 
 ***Warning: Chi-square may not be valid due to bins with zero variance
-            in spectrum number(s): 1 2 
+            in spectrum number(s): 10 12 
 
- Null hypothesis probability of 1.00e+00 with 8188 degrees of freedom
+ Null hypothesis probability of 0.00e+00 with 8825 degrees of freedom
  Current data and model not fit yet.
 
-Fit statistic  : C-Statistic                  458.59     using 4096 bins, spectrum 1, group 1.
-                 C-Statistic                  658.82     using 4096 bins, spectrum 2, group 2.
-Total fit statistic                          1117.41     with 8188 d.o.f.
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8825 d.o.f.
 
-Test statistic : Chi-Squared                 1008.68     using 8192 bins.
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
 
 ***Warning: Chi-square may not be valid due to bins with zero variance
-            in spectrum number(s): 1 2 
+            in spectrum number(s): 10 12 
 
- Null hypothesis probability of 1.00e+00 with 8188 degrees of freedom
+ Null hypothesis probability of 0.00e+00 with 8825 degrees of freedom
  Current data and model not fit yet.
 
-Fit statistic  : C-Statistic                  458.59     using 4096 bins, spectrum 1, group 1.
-                 C-Statistic                  658.82     using 4096 bins, spectrum 2, group 2.
-Total fit statistic                          1117.41     with 8188 d.o.f.
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8825 d.o.f.
 
-Test statistic : Chi-Squared                 1008.68     using 8192 bins.
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
 
 ***Warning: Chi-square may not be valid due to bins with zero variance
-            in spectrum number(s): 1 2 
+            in spectrum number(s): 10 12 
 
- Null hypothesis probability of 1.00e+00 with 8188 degrees of freedom
+ Null hypothesis probability of 0.00e+00 with 8825 degrees of freedom
  Current data and model not fit yet.
 
-Fit statistic  : C-Statistic                  458.59     using 4096 bins, spectrum 1, group 1.
-                 C-Statistic                  658.82     using 4096 bins, spectrum 2, group 2.
-Total fit statistic                          1117.41     with 8188 d.o.f.
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8825 d.o.f.
 
-Test statistic : Chi-Squared                 1008.68     using 8192 bins.
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
 
 ***Warning: Chi-square may not be valid due to bins with zero variance
-            in spectrum number(s): 1 2 
+            in spectrum number(s): 10 12 
 
- Null hypothesis probability of 1.00e+00 with 8188 degrees of freedom
+ Null hypothesis probability of 0.00e+00 with 8825 degrees of freedom
  Current data and model not fit yet.
 
-Fit statistic  : C-Statistic                  458.59     using 4096 bins, spectrum 1, group 1.
-                 C-Statistic                  658.82     using 4096 bins, spectrum 2, group 2.
-Total fit statistic                          1117.41     with 8187 d.o.f.
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8825 d.o.f.
 
-Test statistic : Chi-Squared                 1008.68     using 8192 bins.
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
 
 ***Warning: Chi-square may not be valid due to bins with zero variance
-            in spectrum number(s): 1 2 
+            in spectrum number(s): 10 12 
 
- Null hypothesis probability of 1.00e+00 with 8187 degrees of freedom
+ Null hypothesis probability of 0.00e+00 with 8825 degrees of freedom
  Current data and model not fit yet.
 
-Fit statistic  : C-Statistic                  458.59     using 4096 bins, spectrum 1, group 1.
-                 C-Statistic                  658.82     using 4096 bins, spectrum 2, group 2.
-Total fit statistic                          1117.41     with 8186 d.o.f.
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8825 d.o.f.
 
-Test statistic : Chi-Squared                 1008.68     using 8192 bins.
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
 
 ***Warning: Chi-square may not be valid due to bins with zero variance
-            in spectrum number(s): 1 2 
+            in spectrum number(s): 10 12 
 
- Null hypothesis probability of 1.00e+00 with 8186 degrees of freedom
+ Null hypothesis probability of 0.00e+00 with 8825 degrees of freedom
  Current data and model not fit yet.
 
-Fit statistic  : C-Statistic                  458.59     using 4096 bins, spectrum 1, group 1.
-                 C-Statistic                  658.82     using 4096 bins, spectrum 2, group 2.
-Total fit statistic                          1117.41     with 8185 d.o.f.
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8825 d.o.f.
 
-Test statistic : Chi-Squared                 1008.68     using 8192 bins.
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
 
 ***Warning: Chi-square may not be valid due to bins with zero variance
-            in spectrum number(s): 1 2 
+            in spectrum number(s): 10 12 
 
- Null hypothesis probability of 1.00e+00 with 8185 degrees of freedom
+ Null hypothesis probability of 0.00e+00 with 8825 degrees of freedom
  Current data and model not fit yet.
 
-Fit statistic  : C-Statistic                  458.59     using 4096 bins, spectrum 1, group 1.
-                 C-Statistic                  658.82     using 4096 bins, spectrum 2, group 2.
-Total fit statistic                          1117.41     with 8184 d.o.f.
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8825 d.o.f.
 
-Test statistic : Chi-Squared                 1008.68     using 8192 bins.
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
 
 ***Warning: Chi-square may not be valid due to bins with zero variance
-            in spectrum number(s): 1 2 
+            in spectrum number(s): 10 12 
 
- Null hypothesis probability of 1.00e+00 with 8184 degrees of freedom
+ Null hypothesis probability of 0.00e+00 with 8825 degrees of freedom
  Current data and model not fit yet.
 
-Fit statistic  : C-Statistic                  458.59     using 4096 bins, spectrum 1, group 1.
-                 C-Statistic                  658.82     using 4096 bins, spectrum 2, group 2.
-Total fit statistic                          1117.41     with 8184 d.o.f.
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8826 d.o.f.
 
-Test statistic : Chi-Squared                 1008.68     using 8192 bins.
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
 
 ***Warning: Chi-square may not be valid due to bins with zero variance
-            in spectrum number(s): 1 2 
+            in spectrum number(s): 10 12 
 
- Null hypothesis probability of 1.00e+00 with 8184 degrees of freedom
+ Null hypothesis probability of 0.00e+00 with 8826 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8825 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8825 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8825 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8825 degrees of freedom
+ Current data and model not fit yet.
+  parameter pileup:26 is not frozen.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8825 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8825 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8824 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8824 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8824 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8824 degrees of freedom
+ Current data and model not fit yet.
+  parameter pileup:47 is not frozen.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8824 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8824 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8823 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8823 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8823 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8823 degrees of freedom
+ Current data and model not fit yet.
+  parameter pileup:68 is not frozen.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8823 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8823 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8822 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8822 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8822 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8822 degrees of freedom
+ Current data and model not fit yet.
+  parameter pileup:89 is not frozen.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8822 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8822 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8821 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8821 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8821 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8821 degrees of freedom
+ Current data and model not fit yet.
+  parameter pileup:110 is not frozen.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8821 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8821 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8819 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8819 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8819 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8819 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8820 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8820 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8818 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8818 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8818 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8818 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8819 d.o.f.
+
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 8819 degrees of freedom
  Current data and model not fit yet.
 Default fit statistic is set to: C-Statistic
    This will apply to all current and newly loaded spectra.
 
-Fit statistic  : C-Statistic                  458.59     using 4096 bins, spectrum 1, group 1.
-                 C-Statistic                  658.82     using 4096 bins, spectrum 2, group 2.
-Total fit statistic                          1117.41     with 8184 d.o.f.
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+Total fit statistic                         148849.0     with 8819 d.o.f.
 
-Test statistic : Chi-Squared                 1008.68     using 8192 bins.
+Test statistic : Chi-Squared                34541.89     using 8840 bins.
 
 ***Warning: Chi-square may not be valid due to bins with zero variance
-            in spectrum number(s): 1 2 
+            in spectrum number(s): 10 12 
 
- Null hypothesis probability of 1.00e+00 with 8184 degrees of freedom
+ Null hypothesis probability of 0.00e+00 with 8819 degrees of freedom
  Current data and model not fit yet.
-                                   Parameters
-C-Statistic  |beta|/N    Lvl  pileup:1:lam   pileup:2:mu pileup:3:sigm pileup:4:norm  pileup:5:lam   pileup:6:mu pileup:7:sigm pileup:8:norm
-769.942      100.919      -2       3.00000       3.45041       1.02237      0.412063       2.78268       4.19293      0.824964      0.281636
-590.579      96.3534      -3       3.00000       3.38936       1.13127      0.536120       2.68976       3.99924      0.988191      0.356563
-514.101      46.6668      -4       3.00000       3.30725       1.25359      0.610569       2.52014       3.76537       1.13714      0.429202
-475.256      24.3565      -5       3.00000       3.19681       1.37367      0.659707       2.05723       3.58254       1.19341      0.474512
-438.642      12.1703      -6       3.00000       3.07228       1.47823      0.704477       1.33120       3.47496       1.07558      0.465359
-420.184      5.88091      -7       3.00000       2.96334       1.55647      0.742319       1.01194       3.38019      0.786410      0.435033
-416.821      3.57989      -8       3.00000       2.88965       1.60526      0.767843      0.938528       3.32718      0.630180      0.432613
-416.593      1.25394      -9       3.00000       2.84965       1.63089      0.781574      0.932323       3.30476      0.628473      0.437169
-416.562      0.440623    -10       3.00000       2.83079       1.64285      0.787952      0.929874       3.30467      0.621747      0.436793
-416.556      0.185388    -11       3.00000       2.82249       1.64809      0.790724      0.929515       3.30322      0.622845      0.437009
-416.419      0.0760253     0       2.83226       2.81875       1.64604      0.789597      0.929484       3.30327      0.622649      0.437000
-415.225      0.837633     -1       2.15844       2.76236       1.60520      0.777051      0.929387       3.30338      0.622296      0.436956
-412.399      2.29902      -1       1.63482       2.70047       1.51146      0.754197      0.929354       3.30335      0.622285      0.436953
-407.791      3.39839      -1       1.33867       2.69190       1.34804      0.714575      0.929341       3.30334      0.622270      0.436952
-403.871      2.60087      -1       1.21461       2.77414       1.17112      0.664834      0.929336       3.30333      0.622265      0.436952
-403.56       1.25029      -2       1.03719       3.17903      0.748937      0.500420      0.929333       3.30333      0.622262      0.436952
-399.421      5.9832       -3       1.09176       3.06061      0.817772      0.548200      0.929333       3.30333      0.622261      0.436952
-399.257      1.60413      -4       1.08213       3.05024      0.800404      0.556625      0.929333       3.30333      0.622261      0.436952
-399.251      0.0956565    -5       1.07759       3.05131      0.790907      0.555543      0.929333       3.30333      0.622261      0.436952
-==========================================================================================
- Variances and Principal Axes
-          pileup:1 pileup:2 pileup:3 pileup:4 pileup:5 pileup:6 pileup:7 pileup:8  
- 4.0485E-04|  0.0000   0.0000   0.0000   0.0000  -0.2097   0.1949   0.0036   0.9581  
- 5.7045E-04| -0.2635   0.2920   0.0491   0.9181   0.0000   0.0000   0.0000   0.0000  
- 1.4136E-03|  0.0000   0.0000   0.0000   0.0000   0.8514  -0.3329  -0.3149   0.2552  
- 1.7157E-03|  0.6994  -0.3472  -0.5245   0.3393   0.0000   0.0000   0.0000   0.0000  
- 8.7595E-03|  0.0000   0.0000   0.0000   0.0000  -0.4341  -0.8796  -0.1753   0.0846  
- 1.4510E-02| -0.6241  -0.7094  -0.3213   0.0637   0.0000   0.0000   0.0000   0.0000  
- 1.7338E-02|  0.0000   0.0000   0.0000   0.0000   0.2067  -0.2784   0.9328   0.0984  
- 3.4979E-02|  0.2278  -0.5394   0.7869   0.1949   0.0000   0.0000   0.0000   0.0000  
-------------------------------------------------------------------------------------------
 
-================================================================================================
-  Covariance Matrix
-        1           2           3           4           5           6           7           8   
-   8.345e-03   1.665e-03   8.544e-03   1.246e-03   0.000e+00   0.000e+00   0.000e+00   0.000e+00
-   1.665e-03   1.773e-02  -1.122e-02  -4.381e-03   0.000e+00   0.000e+00   0.000e+00   0.000e+00
-   8.544e-03  -1.122e-02   2.363e-02   4.788e-03   0.000e+00   0.000e+00   0.000e+00   0.000e+00
-   1.246e-03  -4.381e-03   4.788e-03   2.066e-03   0.000e+00   0.000e+00   0.000e+00   0.000e+00
-   0.000e+00   0.000e+00   0.000e+00   0.000e+00   3.434e-03   1.930e-03   3.630e-03   2.566e-04
-   0.000e+00   0.000e+00   0.000e+00   0.000e+00   1.930e-03   8.293e-03  -3.004e-03  -1.171e-03
-   0.000e+00   0.000e+00   0.000e+00   0.000e+00   3.630e-03  -3.004e-03   1.549e-02   1.349e-03
-   0.000e+00   0.000e+00   0.000e+00   0.000e+00   2.566e-04  -1.171e-03   1.349e-03   6.942e-04
-------------------------------------------------------------------------------------------------
+***XSPEC Error:  initializing statistic: Spectra with responses but no models: 2 4 6 8 
+Warning: RMF DETNAM keyword (DET2) is not consistent with that in spectrum (NONE)
+Warning: RMF DETNAM keyword (DET2) is not consistent with that in spectrum (NONE)
+Warning: RMF DETNAM keyword (DET2) is not consistent with that in spectrum (NONE)
+Warning: RMF DETNAM keyword (DET2) is not consistent with that in spectrum (NONE)
+
+16 spectra  in use
+ 
+Spectral Data File: fpmA_g0-4.pha  Spectrum 13
+Net count rate (cts/s) for Spectrum:13  2.688e+04 +/- 2.546e+02
+ Assigned to Data Group 13 and Plot Group 13
+  Noticed Channels:  1-4027
+  Telescope: NuSTAR Instrument: FPMA  Channel Type: PI
+  Exposure Time: 0.4148 sec
+ Using fit statistic: cstat
+ Using Response (RMF) File            fpmA_g0-4.srm for Source 1
+
+Spectral Data File: fpmA_g21-24.pha  Spectrum 14
+Net count rate (cts/s) for Spectrum:14  1.155e+03 +/- 5.276e+01
+ Assigned to Data Group 14 and Plot Group 14
+  Noticed Channels:  1-4096
+  Telescope: NuSTAR Instrument: FPMA  Channel Type: PI
+  Exposure Time: 0.4148 sec
+ Using fit statistic: cstat
+ Using Response (RMF) File            fpmA_g21-24.srm for Source 1
+
+Spectral Data File: fpmB_g0-4.pha  Spectrum 15
+Net count rate (cts/s) for Spectrum:15  2.968e+04 +/- 2.832e+02
+ Assigned to Data Group 15 and Plot Group 15
+  Noticed Channels:  1-4028
+  Telescope: NuSTAR Instrument: FPMB  Channel Type: PI
+  Exposure Time: 0.3701 sec
+ Using fit statistic: cstat
+ Using Response (RMF) File            fpmB_g0-4.srm for Source 1
+
+Spectral Data File: fpmB_g21-24.pha  Spectrum 16
+Net count rate (cts/s) for Spectrum:16  1.194e+03 +/- 5.681e+01
+ Assigned to Data Group 16 and Plot Group 16
+  Noticed Channels:  1-4096
+  Telescope: NuSTAR Instrument: FPMB  Channel Type: PI
+  Exposure Time: 0.3701 sec
+ Using fit statistic: cstat
+ Using Response (RMF) File            fpmB_g21-24.srm for Source 1
+
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                  322.28     using 4096 bins, spectrum 14, group 14.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278760.5     with 25066 d.o.f.
+
+Test statistic : Chi-Squared                55051.01     using 25087 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 14 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 25066 degrees of freedom
+ Current data and model not fit yet.
+Warning: RMF DETNAM keyword (DET2) is not consistent with that in spectrum (NONE)
+Response successfully loaded.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                  322.28     using 4096 bins, spectrum 14, group 14.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278760.5     with 25066 d.o.f.
+
+Test statistic : Chi-Squared                55051.01     using 25087 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 14 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 25066 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                  322.28     using 4096 bins, spectrum 14, group 14.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278760.5     with 25066 d.o.f.
+
+Test statistic : Chi-Squared                55051.01     using 25087 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 14 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 25066 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                  322.28     using 4096 bins, spectrum 14, group 14.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278760.5     with 25066 d.o.f.
+
+Test statistic : Chi-Squared                55051.01     using 25087 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 14 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 25066 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                  322.28     using 4096 bins, spectrum 14, group 14.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278760.5     with 25066 d.o.f.
+
+Test statistic : Chi-Squared                55051.01     using 25087 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 14 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 25066 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                  322.28     using 4096 bins, spectrum 14, group 14.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278760.5     with 25066 d.o.f.
+
+Test statistic : Chi-Squared                55051.01     using 25087 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 14 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 25066 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                  322.28     using 4096 bins, spectrum 14, group 14.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278760.5     with 25066 d.o.f.
+
+Test statistic : Chi-Squared                55051.01     using 25087 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 14 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 25066 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                  322.28     using 4096 bins, spectrum 14, group 14.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278760.5     with 25066 d.o.f.
+
+Test statistic : Chi-Squared                55051.01     using 25087 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 14 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 25066 degrees of freedom
+ Current data and model not fit yet.
+
+XSPEC: Request to remove response for non-existing
+       source ... skipped
+
+XSPEC: Request to remove response for non-existing
+       source ... skipped
+***Warning!  One or more spectra are missing responses,
+               and are not suitable for fit.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278438.2     with 20970 d.o.f.
+
+Test statistic : Chi-Squared                54581.84     using 20991 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 20970 degrees of freedom
+ Current data and model not fit yet.
+***Warning!  One or more spectra are missing responses,
+               and are not suitable for fit.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278438.2     with 20970 d.o.f.
+
+Test statistic : Chi-Squared                54581.84     using 20991 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 20970 degrees of freedom
+ Current data and model not fit yet.
+***Warning!  One or more spectra are missing responses,
+               and are not suitable for fit.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278438.2     with 20970 d.o.f.
+
+Test statistic : Chi-Squared                54581.84     using 20991 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 20970 degrees of freedom
+ Current data and model not fit yet.
+***Warning!  One or more spectra are missing responses,
+               and are not suitable for fit.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278438.2     with 20970 d.o.f.
+
+Test statistic : Chi-Squared                54581.84     using 20991 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 20970 degrees of freedom
+ Current data and model not fit yet.
+***Warning!  One or more spectra are missing responses,
+               and are not suitable for fit.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278438.2     with 20970 d.o.f.
+
+Test statistic : Chi-Squared                54581.84     using 20991 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 20970 degrees of freedom
+ Current data and model not fit yet.
+***Warning!  One or more spectra are missing responses,
+               and are not suitable for fit.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278438.2     with 20970 d.o.f.
+
+Test statistic : Chi-Squared                54581.84     using 20991 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 20970 degrees of freedom
+ Current data and model not fit yet.
+***Warning!  One or more spectra are missing responses,
+               and are not suitable for fit.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278438.2     with 20970 d.o.f.
+
+Test statistic : Chi-Squared                54581.84     using 20991 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 20970 degrees of freedom
+ Current data and model not fit yet.
+Warning: RMF DETNAM keyword (DET2) is not consistent with that in spectrum (NONE)
+Response successfully loaded.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278438.2     with 20970 d.o.f.
+
+Test statistic : Chi-Squared                54581.84     using 20991 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 20970 degrees of freedom
+ Current data and model not fit yet.
+
+XSPEC: Request to remove response for non-existing
+       source ... skipped
+Warning: RMF DETNAM keyword (DET2) is not consistent with that in spectrum (NONE)
+Response successfully loaded.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278438.2     with 20970 d.o.f.
+
+Test statistic : Chi-Squared                54581.84     using 20991 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 20970 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278438.2     with 20970 d.o.f.
+
+Test statistic : Chi-Squared                54581.84     using 20991 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 20970 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278438.2     with 20970 d.o.f.
+
+Test statistic : Chi-Squared                54581.84     using 20991 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 20970 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278438.2     with 20970 d.o.f.
+
+Test statistic : Chi-Squared                54581.84     using 20991 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 20970 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278438.2     with 20970 d.o.f.
+
+Test statistic : Chi-Squared                54581.84     using 20991 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 20970 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278438.2     with 20970 d.o.f.
+
+Test statistic : Chi-Squared                54581.84     using 20991 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 20970 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278438.2     with 20970 d.o.f.
+
+Test statistic : Chi-Squared                54581.84     using 20991 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 20970 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+                 C-Statistic                  422.45     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         278438.2     with 20970 d.o.f.
+
+Test statistic : Chi-Squared                54581.84     using 20991 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 16 
+
+ Null hypothesis probability of 0.00e+00 with 20970 degrees of freedom
+ Current data and model not fit yet.
+
+XSPEC: Request to remove response for non-existing
+       source ... skipped
+***Warning!  One or more spectra are missing responses,
+               and are not suitable for fit.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+Total fit statistic                         278015.8     with 16874 d.o.f.
+
+Test statistic : Chi-Squared                53941.71     using 16895 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 
+
+ Null hypothesis probability of 0.00e+00 with 16874 degrees of freedom
+ Current data and model not fit yet.
+***Warning!  One or more spectra are missing responses,
+               and are not suitable for fit.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+Total fit statistic                         278015.8     with 16874 d.o.f.
+
+Test statistic : Chi-Squared                53941.71     using 16895 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 
+
+ Null hypothesis probability of 0.00e+00 with 16874 degrees of freedom
+ Current data and model not fit yet.
+***Warning!  One or more spectra are missing responses,
+               and are not suitable for fit.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+Total fit statistic                         278015.8     with 16874 d.o.f.
+
+Test statistic : Chi-Squared                53941.71     using 16895 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 
+
+ Null hypothesis probability of 0.00e+00 with 16874 degrees of freedom
+ Current data and model not fit yet.
+***Warning!  One or more spectra are missing responses,
+               and are not suitable for fit.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+Total fit statistic                         278015.8     with 16874 d.o.f.
+
+Test statistic : Chi-Squared                53941.71     using 16895 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 
+
+ Null hypothesis probability of 0.00e+00 with 16874 degrees of freedom
+ Current data and model not fit yet.
+***Warning!  One or more spectra are missing responses,
+               and are not suitable for fit.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+Total fit statistic                         278015.8     with 16874 d.o.f.
+
+Test statistic : Chi-Squared                53941.71     using 16895 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 
+
+ Null hypothesis probability of 0.00e+00 with 16874 degrees of freedom
+ Current data and model not fit yet.
+***Warning!  One or more spectra are missing responses,
+               and are not suitable for fit.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+Total fit statistic                         278015.8     with 16874 d.o.f.
+
+Test statistic : Chi-Squared                53941.71     using 16895 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 
+
+ Null hypothesis probability of 0.00e+00 with 16874 degrees of freedom
+ Current data and model not fit yet.
+***Warning!  One or more spectra are missing responses,
+               and are not suitable for fit.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+Total fit statistic                         278015.8     with 16874 d.o.f.
+
+Test statistic : Chi-Squared                53941.71     using 16895 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 
+
+ Null hypothesis probability of 0.00e+00 with 16874 degrees of freedom
+ Current data and model not fit yet.
+***Warning!  One or more spectra are missing responses,
+               and are not suitable for fit.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+Total fit statistic                         278015.8     with 16874 d.o.f.
+
+Test statistic : Chi-Squared                53941.71     using 16895 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 
+
+ Null hypothesis probability of 0.00e+00 with 16874 degrees of freedom
+ Current data and model not fit yet.
+Warning: RMF DETNAM keyword (DET2) is not consistent with that in spectrum (NONE)
+Response successfully loaded.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                66804.65     using 4027 bins, spectrum 13, group 13.
+                 C-Statistic                62362.15     using 4028 bins, spectrum 15, group 15.
+Total fit statistic                         278015.8     with 16874 d.o.f.
+
+Test statistic : Chi-Squared                53941.71     using 16895 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 13 15 
+
+ Null hypothesis probability of 0.00e+00 with 16874 degrees of freedom
+ Current data and model not fit yet.
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                24749.59     using 108 bins, spectrum 13, group 13.
+                 C-Statistic                24614.43     using 108 bins, spectrum 15, group 15.
+Total fit statistic                         198213.0     with 9035 d.o.f.
+
+Test statistic : Chi-Squared                45693.85     using 9056 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 9035 degrees of freedom
+ Current data and model not fit yet.
+
 
 ========================================================================
-Model pileup:expmodgauss<1> Source No.: 1   Active/On
+Model pileupFPMA:expmodgauss<1> Source No.: 2   Active/On
 Model Model Component  Parameter  Unit     Value
  par  comp
-                           Data group: 1
-   1    1   expmodgausslam        ct/keV/s 1.07759      +/-  9.13520E-02  
-   2    1   expmodgaussmu         keV      3.05131      +/-  0.133168     
-   3    1   expmodgausssigma      keV      0.790907     +/-  0.153723     
-   4    1   expmodgaussnorm                0.555543     +/-  4.54483E-02  
                            Data group: 2
-   5    1   expmodgausslam        ct/keV/s 0.929333     +/-  5.85995E-02  
-   6    1   expmodgaussmu         keV      3.30333      +/-  9.10658E-02  
-   7    1   expmodgausssigma      keV      0.622261     +/-  0.124477     
-   8    1   expmodgaussnorm                0.436952     +/-  2.63483E-02  
+   1    1   expmodgausslam        ct/keV/s 1.50000      +/-  0.0          
+   2    1   expmodgaussmu         keV      3.00000      +/-  0.0          
+   3    1   expmodgausssigma      keV      1.00000      +/-  0.0          
+   4    1   expmodgaussnorm                1.00000      +/-  0.0          
 ________________________________________________________________________
 
 
-Fit statistic  : C-Statistic                  188.20     using 4096 bins, spectrum 1, group 1.
-                 C-Statistic                  211.05     using 4096 bins, spectrum 2, group 2.
-Total fit statistic                           399.25     with 8184 d.o.f.
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 2, group 2.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                24749.59     using 108 bins, spectrum 13, group 13.
+                 C-Statistic                24614.43     using 108 bins, spectrum 15, group 15.
+Total fit statistic                         198213.0     with 9031 d.o.f.
 
-Test statistic : Chi-Squared                  269.77     using 8192 bins.
+Test statistic : Chi-Squared                45693.85     using 9056 bins.
 
 ***Warning: Chi-square may not be valid due to bins with zero variance
-            in spectrum number(s): 1 2 
+            in spectrum number(s): 2 12 
 
- Null hypothesis probability of 1.00e+00 with 8184 degrees of freedom
- Parameter   Confidence Range (2.706)
-     1     0.927562      1.28063    (-0.148408,0.20466)
-     2      2.80812      3.22276    (-0.242345,0.172297)
-     3     0.498111      1.08019    (-0.290387,0.291692)
-     4     0.494941     0.644354    (-0.0604843,0.0889296)
-     5     0.830819      1.05106    (-0.0985135,0.121724)
-     6      3.14416      3.44677    (-0.159166,0.143442)
-     7     0.444393     0.828891    (-0.177868,0.20663)
-     8     0.397845     0.482416    (-0.0391067,0.045464)
+ Null hypothesis probability of 0.00e+00 with 9031 degrees of freedom
+ Current data and model not fit yet.
+
+========================================================================
+Model pileupFPMB:expmodgauss<1> Source No.: 3   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 4
+   1    1   expmodgausslam        ct/keV/s 1.50000      +/-  0.0          
+   2    1   expmodgaussmu         keV      3.00000      +/-  0.0          
+   3    1   expmodgausssigma      keV      1.00000      +/-  0.0          
+   4    1   expmodgaussnorm                1.00000      +/-  0.0          
+________________________________________________________________________
+
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 2, group 2.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 4, group 4.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                24749.59     using 108 bins, spectrum 13, group 13.
+                 C-Statistic                24614.43     using 108 bins, spectrum 15, group 15.
+Total fit statistic                         198213.0     with 9027 d.o.f.
+
+Test statistic : Chi-Squared                45693.85     using 9056 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 2 4 
+
+ Null hypothesis probability of 0.00e+00 with 9027 degrees of freedom
+ Current data and model not fit yet.
+
+========================================================================
+Model pileupFPMA:expmodgauss<1> Source No.: 4   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 6
+   1    1   expmodgausslam        ct/keV/s 1.50000      +/-  0.0          
+   2    1   expmodgaussmu         keV      3.00000      +/-  0.0          
+   3    1   expmodgausssigma      keV      1.00000      +/-  0.0          
+   4    1   expmodgaussnorm                1.00000      +/-  0.0          
+________________________________________________________________________
+
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 4, group 4.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 6, group 6.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                24749.59     using 108 bins, spectrum 13, group 13.
+                 C-Statistic                24614.43     using 108 bins, spectrum 15, group 15.
+Total fit statistic                         198213.0     with 9027 d.o.f.
+
+Test statistic : Chi-Squared                45693.85     using 9056 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 4 6 
+
+ Null hypothesis probability of 0.00e+00 with 9027 degrees of freedom
+ Current data and model not fit yet.
+
+========================================================================
+Model pileupFPMB:expmodgauss<1> Source No.: 5   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 8
+   1    1   expmodgausslam        ct/keV/s 1.50000      +/-  0.0          
+   2    1   expmodgaussmu         keV      3.00000      +/-  0.0          
+   3    1   expmodgausssigma      keV      1.00000      +/-  0.0          
+   4    1   expmodgaussnorm                1.00000      +/-  0.0          
+________________________________________________________________________
+
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 6, group 6.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 8, group 8.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                24749.59     using 108 bins, spectrum 13, group 13.
+                 C-Statistic                24614.43     using 108 bins, spectrum 15, group 15.
+Total fit statistic                         198213.0     with 9027 d.o.f.
+
+Test statistic : Chi-Squared                45693.85     using 9056 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 6 8 
+
+ Null hypothesis probability of 0.00e+00 with 9027 degrees of freedom
+ Current data and model not fit yet.
+
+========================================================================
+Model pileupFPMA:expmodgauss<1> Source No.: 6   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 10
+   1    1   expmodgausslam        ct/keV/s 1.50000      +/-  0.0          
+   2    1   expmodgaussmu         keV      3.00000      +/-  0.0          
+   3    1   expmodgausssigma      keV      1.00000      +/-  0.0          
+   4    1   expmodgaussnorm                1.00000      +/-  0.0          
+________________________________________________________________________
+
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 8, group 8.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                24749.59     using 108 bins, spectrum 13, group 13.
+                 C-Statistic                24614.43     using 108 bins, spectrum 15, group 15.
+Total fit statistic                         198213.0     with 9027 d.o.f.
+
+Test statistic : Chi-Squared                45693.85     using 9056 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 8 10 
+
+ Null hypothesis probability of 0.00e+00 with 9027 degrees of freedom
+ Current data and model not fit yet.
+
+========================================================================
+Model pileupFPMB:expmodgauss<1> Source No.: 7   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 12
+   1    1   expmodgausslam        ct/keV/s 1.50000      +/-  0.0          
+   2    1   expmodgaussmu         keV      3.00000      +/-  0.0          
+   3    1   expmodgausssigma      keV      1.00000      +/-  0.0          
+   4    1   expmodgaussnorm                1.00000      +/-  0.0          
+________________________________________________________________________
+
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 10, group 10.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                24749.59     using 108 bins, spectrum 13, group 13.
+                 C-Statistic                24614.43     using 108 bins, spectrum 15, group 15.
+Total fit statistic                         198213.0     with 9027 d.o.f.
+
+Test statistic : Chi-Squared                45693.85     using 9056 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 10 12 
+
+ Null hypothesis probability of 0.00e+00 with 9027 degrees of freedom
+ Current data and model not fit yet.
+
+========================================================================
+Model pileupFPMA:expmodgauss<1> Source No.: 8   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 14
+   1    1   expmodgausslam        ct/keV/s 1.50000      +/-  0.0          
+   2    1   expmodgaussmu         keV      3.00000      +/-  0.0          
+   3    1   expmodgausssigma      keV      1.00000      +/-  0.0          
+   4    1   expmodgaussnorm                1.00000      +/-  0.0          
+________________________________________________________________________
+
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 12, group 12.
+                 C-Statistic                24749.59     using 108 bins, spectrum 13, group 13.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 14, group 14.
+                 C-Statistic                24614.43     using 108 bins, spectrum 15, group 15.
+Total fit statistic                         198213.0     with 9027 d.o.f.
+
+Test statistic : Chi-Squared                45693.85     using 9056 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 12 14 
+
+ Null hypothesis probability of 0.00e+00 with 9027 degrees of freedom
+ Current data and model not fit yet.
+
+========================================================================
+Model pileupFPMB:expmodgauss<1> Source No.: 9   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 16
+   1    1   expmodgausslam        ct/keV/s 1.50000      +/-  0.0          
+   2    1   expmodgaussmu         keV      3.00000      +/-  0.0          
+   3    1   expmodgausssigma      keV      1.00000      +/-  0.0          
+   4    1   expmodgaussnorm                1.00000      +/-  0.0          
+________________________________________________________________________
+
+
+Fit statistic  : C-Statistic                24749.59     using 108 bins, spectrum 1, group 1.
+                 C-Statistic                24614.43     using 108 bins, spectrum 3, group 3.
+                 C-Statistic                24749.59     using 108 bins, spectrum 5, group 5.
+                 C-Statistic                24614.43     using 108 bins, spectrum 7, group 7.
+                 C-Statistic                24749.59     using 108 bins, spectrum 9, group 9.
+                 C-Statistic                24614.43     using 108 bins, spectrum 11, group 11.
+                 C-Statistic                24749.59     using 108 bins, spectrum 13, group 13.
+                 C-Statistic                  319.86     using 4096 bins, spectrum 14, group 14.
+                 C-Statistic                24614.43     using 108 bins, spectrum 15, group 15.
+                 C-Statistic                  437.05     using 4096 bins, spectrum 16, group 16.
+Total fit statistic                         198213.0     with 9027 d.o.f.
+
+Test statistic : Chi-Squared                45693.85     using 9056 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 14 16 
+
+ Null hypothesis probability of 0.00e+00 with 9027 degrees of freedom
+ Current data and model not fit yet.
